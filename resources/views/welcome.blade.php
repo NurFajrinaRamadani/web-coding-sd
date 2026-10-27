@@ -1,823 +1,636 @@
 <!DOCTYPE html>
-
-<html lang="id"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
-<meta content="mobile_tab" name="shell-type"/>
-<title>Rakit AI Kids - Sekolah Coding &amp; Robotik Berstandar Global</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Poppins:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              red: '#EA533E',
-              dark: '#1D2530',
-              slate: '#3A404C',
-              yellow: '#FFC93C',
-              green: '#10B981',
-              peach: '#FFF4EE',
-              softblue: '#EEF4FF'
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Rakit AI - Coding & AI School for Kids & Teens</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#00C06A', greenDark: '#009F54', greenLight: '#E8F9F1',
+                            navy: '#1A2B49', navyMuted: '#4A5578', navyDark: '#121D32',
+                            orange: '#E84E38', orangeHover: '#D63E29',
+                            blue: '#2B7FFF', purple: '#8B5CF6', yellow: '#FFC727',
+                            bgLight: '#FCFDFE'
+                        }
+                    },
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    boxShadow: {
+                        'card': '0 10px 25px -5px rgba(26, 43, 73, 0.07)',
+                    }
+                }
             }
-          },
-          fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            display: ['Poppins', 'sans-serif']
-          }
         }
-      }
-    };
-  </script>
-<style>
-    body {
-      overscroll-behavior-y: none;
-      -webkit-tap-highlight-color: transparent;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    .scrollbar-none::-webkit-scrollbar {
-      display: none;
-    }
-    .scrollbar-none {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-  </style>
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+
+        @keyframes slideInRight {
+            0% { transform: translateX(100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        .animate-slide-in-right { animation: slideInRight 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+    </style>
 </head>
-<body class="bg-[#F8F9FD] text-brand-slate antialiased">
-<!-- TOP ANNOUNCEMENT BAR (TIMEDOOR STYLE) -->
-<aside class="bg-brand-dark text-white text-[11px] font-semibold py-2 px-3 text-center flex items-center justify-center gap-1.5 sticky top-0 z-50">
-<span class="inline-block px-1.5 py-0.2 bg-brand-yellow text-brand-dark rounded text-[9px] font-extrabold uppercase tracking-wider">Info</span>
-<span>Kompetisi AI &amp; Coding Cilik 2026 Dibuka!</span>
-<a class="text-brand-yellow underline font-bold ml-1 hover:text-white" href="#trial-section">Daftar Sekarang →</a>
-</aside>
-<!-- APP / SITE HEADER -->
-<header class="bg-white border-b border-gray-100 sticky top-[33px] z-40 px-4 h-15 flex items-center justify-between shadow-[0_2px_10px_rgba(0,0,0,0.03)]">
-<div class="flex items-center gap-2.5">
-<button aria-label="Menu Navigasi" class="w-9 h-9 rounded-lg flex items-center justify-center text-brand-slate hover:bg-gray-100 active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-[24px]">menu</span>
-</button>
-<div class="flex items-center gap-1.5">
-<div class="w-8 h-8 rounded-xl bg-brand-red flex items-center justify-center text-white font-display font-black text-lg shadow-sm shadow-brand-red/30">
-          R
+<body class="bg-brand-bgLight text-brand-navy antialiased selection:bg-brand-green selection:text-white pb-14 overflow-x-hidden">
+
+    <!-- ================= HEADER ================= -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a class="flex items-center gap-2" href="#">
+                <img alt="Rakit AI Logo" class="h-12 w-auto object-contain" src="/logo.png"/>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-bold text-gray-600">
+                <a href="#programs" class="hover:text-brand-orange transition-colors">Program</a>
+                <a href="#method" class="hover:text-brand-orange transition-colors">Metode</a>
+                <a href="#testimonials" class="hover:text-brand-orange transition-colors">Testimoni</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <div class="hidden sm:flex items-center bg-gray-100 p-0.5 rounded-full text-[11px] font-extrabold text-gray-500">
+                    <span class="bg-white text-brand-navy px-2 py-0.5 rounded-full shadow-sm">ID</span>
+                    <span class="px-1.5 py-0.5 text-gray-400 cursor-pointer hover:text-gray-700">EN</span>
+                </div>
+                <a class="bg-brand-orange hover:bg-brand-orangeHover text-white text-[11px] sm:text-xs font-black px-4 py-2 rounded-full uppercase tracking-wider transition-all shadow-md active:scale-95" href="#trial">
+                    Free Trial
+                </a>
+                <button class="md:hidden p-1 text-brand-navy" type="button">
+                    <svg class="w-6 h-6 stroke-current stroke-2" fill="none" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+            </div>
         </div>
-<div class="leading-none">
-<div class="font-display font-black text-[17px] tracking-tight text-brand-dark flex items-center gap-1">
-            Rakit<span class="text-brand-red">.AI</span>
-</div>
-<span class="text-[9px] font-extrabold tracking-widest uppercase text-gray-400">Kids Academy</span>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-2">
-<!-- Language Picker -->
-<button class="flex items-center gap-1 px-2 py-1 rounded-full border border-gray-200 text-[11px] font-bold text-gray-700 bg-gray-50 active:bg-gray-100">
-<span class="text-xs">🇮🇩</span>
-<span>ID</span>
-<span class="material-symbols-outlined text-[14px]">expand_more</span>
-</button>
-<!-- Primary Action CTA -->
-<a class="bg-brand-red hover:bg-[#d6412d] text-white text-[12px] font-bold px-3.5 py-2 rounded-full shadow-[0_3px_10px_rgba(234,83,62,0.3)] active:scale-95 transition-all flex items-center gap-1" href="#trial-section">
-<span>Trial Gratis</span>
-</a>
-</div>
-</header>
-<main class="w-full max-w-[480px] mx-auto pb-24">
-<!-- 1. HERO CAROUSEL BANNER (TIMEDOOR ACADEMY STYLE) -->
-<section class="p-4 pt-3">
-<div class="relative bg-gradient-to-br from-[#1E2838] via-[#151D29] to-[#0E1520] text-white rounded-3xl p-5 overflow-hidden shadow-xl border border-gray-800">
-<!-- Floating Badge -->
-<div class="flex items-center justify-between mb-3">
-<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-red/90 text-white text-[11px] font-bold border border-white/20 shadow-md">
-<span class="w-2 h-2 rounded-full bg-brand-yellow animate-pulse"></span>
-            INTERNATIONAL AI &amp; CODING
-          </div>
-<span class="text-[11px] text-gray-300 font-semibold bg-white/10 px-2.5 py-0.5 rounded-full">Usia 6 - 18 th</span>
-</div>
-<!-- Headline & Sub -->
-<h1 class="font-display text-[23px] font-black leading-tight tracking-tight mb-2">
-          Belajar Coding, AI &amp; Robotik sambil <span class="text-brand-yellow">Bikin Game</span> Sendiri!
-        </h1>
-<p class="text-[12.5px] text-gray-300 leading-relaxed font-normal mb-4">
-          Kurikulum standar global Jepang &amp; UK untuk melatih logika berpikir, kreativitas visual, dan problem-solving sejak usia SD.
-        </p>
-<!-- Visual Hero Card Showcase (Real Kid & Award) -->
-<div class="relative bg-gradient-to-r from-white/10 to-white/5 rounded-2xl p-3 border border-white/15 flex items-center gap-3.5 mb-4">
-<img alt="Siswa Rakit AI" class="w-18 h-18 w-20 h-20 rounded-xl object-cover border-2 border-brand-yellow shadow-md shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARtBaNADBlnu0yZT5JMD4PjDs_eudzPFEbeP9Y2fQ6RyyjDxO_rqk9ATs0c6cIKupqJiQOTeLQ3ICxCPtaz_4iOb4I0407e_el_yFiHU62_LAvUfdXoZWt2HvPY89Km7CDJEOiTSH147-gIBDDzuyzOiTxaBjGKWdVX1_tYOmzGmjdAl1HNJHi-ynvonOBigrZywZ_N866XQFqjrwjlFAbDLQRUIbW2B-ScnTcLkADWc3f0gsvV0aCaw"/>
-<div>
-<div class="flex items-center gap-1 text-brand-yellow text-xs font-bold mb-0.5">
-<span class="material-symbols-outlined text-[15px]">trophy</span>
-<span>Young Coder 2026</span>
-</div>
-<div class="text-[13px] font-bold text-white leading-tight">10.000+ Siswa Berprestasi</div>
-<div class="text-[11px] text-gray-300 mt-0.5">Dari pemain game jadi programmer cilik berani berinovasi!</div>
-</div>
-</div>
-<!-- CTA & Mini Info -->
-<div class="flex items-center gap-2.5">
-<a class="flex-1 bg-brand-yellow hover:bg-[#ffbf1f] text-brand-dark font-display font-extrabold text-[13px] py-3 rounded-full text-center shadow-lg active:scale-98 transition-all flex items-center justify-center gap-1" href="#trial-section">
-<span>Coba Kelas Gratis</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-<a class="px-3.5 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-[12px] text-center border border-white/20" href="#curriculum-section">
-            Kurikulum
-          </a>
-</div>
-<!-- Carousel Indicators -->
-<div class="flex items-center justify-center gap-1.5 mt-4 pt-1">
-<span class="w-5 h-1.5 rounded-full bg-brand-yellow"></span>
-<span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
-<span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
-<span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
-</div>
-</div>
-</section>
-<!-- 2. QUICK AVATAR TESTIMONIAL CAROUSEL (AS IN TIMEDOOR SNAPSHOT) -->
-<section class="px-4 py-2">
-<div class="flex items-center justify-between mb-2.5">
-<h2 class="text-[13px] font-extrabold tracking-wide uppercase text-gray-500 flex items-center gap-1.5">
-<span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
-          Cerita Siswa Kami
-        </h2>
-<span class="text-[11px] font-bold text-brand-red">Geser →</span>
-</div>
-<div class="flex gap-3 overflow-x-auto pb-2 scrollbar-none snap-x snap-mandatory">
-<!-- Testi Card 1: Jasper -->
-<div class="min-w-[210px] max-w-[210px] snap-center bg-white rounded-2xl p-3.5 border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-2 mb-2">
-<img alt="Jasper" class="w-8 h-8 rounded-full object-cover border border-brand-yellow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARsVhpjJXj7LzkZ_8OyvRuEN-JH3FpNZ85TUDff2SNDkfhx3__r78x6RbMHqdYGkuPMb3XyyiJLkXttsM-Hg7_bocchLQvP2xt4xezh3z7VMZ_8U0kBNa3cSiSoxN-K4JGv_1xnIWdcF1OqC362UrA_j39SmqUUc49huLToYlI4oMwarbtrFJojr2Y8krxb8r4SXYWcb6dnrbQeHu-C_JbodoxMkVgOupnnOfa-uPrbnD56dYSo7qpZA"/>
-<div>
-<h4 class="text-[12px] font-bold text-brand-dark leading-tight">Jasper</h4>
-<span class="text-[10px] text-gray-400">8 tahun • Jakarta</span>
-</div>
-</div>
-<p class="text-[11px] text-gray-600 line-clamp-3 leading-relaxed">
-              "Di Rakit AI aku bisa bikin game arcade sendiri dan pamer ke teman-teman sekelas!"
-            </p>
-</div>
-<a class="mt-2 text-[10px] font-bold text-brand-red hover:underline" href="#">Lihat karya →</a>
-</div>
-<!-- Testi Card 2: Ela De Wide -->
-<div class="min-w-[210px] max-w-[210px] snap-center bg-white rounded-2xl p-3.5 border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-2 mb-2">
-<img alt="Ela" class="w-8 h-8 rounded-full object-cover border border-brand-red" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDREHGAnsA-EOxvD-2e6bSMFaKwtkTUXuj8kKzmDZG5bpvcY1zoImJkOuA0bjW9B95TPwchC4YmoRfCPWgkVdx4lludqfaTIZHSdJ-iYnPE5iugJfk4nSaP1RsFR-_KWP6Ek_oRi98cLo7PhsB7BVR5NsJDpGnz7mI0zWw2k_uusF34rM89tI6YGYa7zU7bpE5OS94P_IdrJF50Pah2NFY06NxWpEtNMAe0q-96yMk3gBujjMklaOK5Ug"/>
-<div>
-<h4 class="text-[12px] font-bold text-brand-dark leading-tight">Ela De Wide</h4>
-<span class="text-[10px] text-gray-400">9 tahun • Bandung</span>
-</div>
-</div>
-<p class="text-[11px] text-gray-600 line-clamp-3 leading-relaxed">
-              "Mentornya sabar banget. Sekarang aku paham logika AI dan cara kerja sensor robotik."
-            </p>
-</div>
-<a class="mt-2 text-[10px] font-bold text-brand-red hover:underline" href="#">Lihat karya →</a>
-</div>
-<!-- Testi Card 3: Howe -->
-<div class="min-w-[210px] max-w-[210px] snap-center bg-white rounded-2xl p-3.5 border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-2 mb-2">
-<img alt="Howe" class="w-8 h-8 rounded-full object-cover border border-emerald-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA_satq9sz-zLzfHvD6cGuwbbQbiI_nv5jwJsDe-AJysGflDXaWPS_eZ9Qbc-4vjGA9lFnZmqwQT57SzPgr7ZfOMl6xP4qRTuOMKjytchk2UZzgB4JQ_pzaqQ_-F5NdrLqVjJM7mjVXhMZ-8icxbIrhSicmhoDD1Tlq2nPo0FN2q1zIQhRYphXXqrC1nrpJxPQ1MQjMy-7cO6WyQiqF5qlvk7UiDRk1i4kamaW0xQj0P3itXnQ_wnV1w"/>
-<div>
-<h4 class="text-[12px] font-bold text-brand-dark leading-tight">Howe</h4>
-<span class="text-[10px] text-gray-400">12 tahun • Surabaya</span>
-</div>
-</div>
-<p class="text-[11px] text-gray-600 line-clamp-3 leading-relaxed">
-              "Dulu cuma kecanduan main Roblox, sekarang sudah bisa bikin map dan scripting 3D sendiri."
-            </p>
-</div>
-<a class="mt-2 text-[10px] font-bold text-brand-red hover:underline" href="#">Lihat karya →</a>
-</div>
-<!-- Testi Card 4: Jeslyn -->
-<div class="min-w-[210px] max-w-[210px] snap-center bg-white rounded-2xl p-3.5 border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-2 mb-2">
-<img alt="Jeslyn" class="w-8 h-8 rounded-full object-cover border border-purple-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADdwOKW6YYF_TOk08lkKmOEliI_bx4rRsnMSrv6bByRtAV2C6pGdmIYqTIX0tJT2T373c-hpn4BftNR_wQJKlLwUseFzMTQywGb7k8BIlEo2mKfP9Pe3nXYCwamMGBh6rsw8DmA7aTx9GZhycEU3eTkkHmOc380zsd4Q6ovZj0KGreZ2l4Auz8_7KI8fF6fqiXEHJQpDqg9I1nOyoKNEWW9_ZyS4Ke-WOZ5zmL5IvXnq_Vp2uvSASUKw"/>
-<div>
-<h4 class="text-[12px] font-bold text-brand-dark leading-tight">Jeslyn</h4>
-<span class="text-[10px] text-gray-400">11 tahun • Bali</span>
-</div>
-</div>
-<p class="text-[11px] text-gray-600 line-clamp-3 leading-relaxed">
-              "Belajar online seru bareng teman-teman dari berbagai kota. Serunya dapat sertifikat resmi."
-            </p>
-</div>
-<a class="mt-2 text-[10px] font-bold text-brand-red hover:underline" href="#">Lihat karya →</a>
-</div>
-</div>
-</section>
-<!-- 3. MORE THAN JUST A CODING SCHOOL (TIMEDOOR VIDEO & INTERACTIVE CARD) -->
-<section class="p-4">
-<div class="bg-gradient-to-br from-[#10B981] via-[#059669] to-[#047857] text-white rounded-3xl p-5 shadow-lg relative overflow-hidden">
-<!-- Cute decorative background shape -->
-<div class="absolute -right-8 -bottom-10 w-44 h-44 rounded-full bg-white/10 pointer-events-none"></div>
-<div class="flex items-center gap-2 mb-2">
-<span class="bg-white/20 backdrop-blur text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full">
-            One-Stop Edutech Center
-          </span>
-</div>
-<h3 class="font-display text-[21px] font-black leading-snug mb-2">
-          More Than Just A Coding School
-        </h3>
-<p class="text-[12px] text-white/90 leading-relaxed mb-4">
-          Kami bukan hanya mengajarkan baris kode, tapi menumbuhkan 4C: <em>Critical Thinking, Creative Problem Solving, Confidence</em>, dan <em>Communication</em>.
-        </p>
-<!-- Video Simulation Card -->
-<div class="relative w-full h-44 rounded-2xl overflow-hidden shadow-inner border border-white/20 mb-4 bg-gray-900 group">
-<img alt="Suasana Kelas Rakit AI" class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX_4_ZAoZeIhSK8NBotrh_LXzYLAepBjvXSscI2eNyJEIaIo-ln6ALqiN7P2O1kui3qCKZrmkKtCQNW5H34fGJlRxZPzTveLNHsyQZycoWFgHnuTnM5oq3gYV96Zt7dQJTd_tMimrs1KaAo1qFiuf_7kinm6i4i0kn-SHSN6B5uhpkiesjUG2SUoWw3iaNuUDqt4Fie5HGVbOB_Sm-4gyaw9YPBeMsuiePKIZy1h24VN-fNZg0xa7gXw"/>
-<div class="absolute inset-0 bg-black/30 flex items-center justify-center">
-<button class="w-13 h-13 w-12 h-12 rounded-full bg-white text-brand-green flex items-center justify-center shadow-lg active:scale-90 transition-transform" onclick="alert('Memutar Video Tur Kelas Rakit AI Kids 🎥')">
-<span class="material-symbols-outlined text-[30px] ml-0.5">play_arrow</span>
-</button>
-</div>
-<div class="absolute bottom-2 left-2.5 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-semibold text-white">
-            Lihat keseruan kelas (1:45)
-          </div>
-</div>
-<div class="flex items-center justify-between">
-<div class="flex items-center -space-x-2">
-<span class="w-7 h-7 rounded-full bg-brand-yellow flex items-center justify-center text-xs font-black text-brand-dark">🤖</span>
-<span class="w-7 h-7 rounded-full bg-white flex items-center justify-center text-xs font-black text-brand-dark">🎮</span>
-<span class="w-7 h-7 rounded-full bg-brand-red flex items-center justify-center text-xs font-black text-white">★</span>
-</div>
-<a class="bg-white text-emerald-800 font-display font-extrabold text-[12px] px-4 py-2.5 rounded-full shadow hover:bg-gray-100 active:scale-95 transition-all" href="#trial-section">
-            Booking Free Trial →
-          </a>
-</div>
-</div>
-</section>
-<!-- 4. EXPANDING GLOBAL IT EDUCATION (50+ BRANCHES & ONLINE COLLAGE) -->
-<section class="px-4 py-6">
-<div class="text-center mb-4">
-<span class="text-[11px] font-black uppercase tracking-wider text-brand-red bg-brand-peach px-3 py-1 rounded-full border border-brand-red/20">
-          Jaringan Pendidikan Luas
-        </span>
-<h3 class="font-display text-[20px] font-extrabold text-brand-dark mt-2 leading-tight">
-          Ekspansi Pembelajaran di 50+ Cabang &amp; Online
-        </h3>
-<p class="text-[12px] text-gray-500 max-w-xs mx-auto mt-1 leading-relaxed">
-          Tersedia di berbagai kota besar Indonesia serta kelas online interaktif untuk anak di seluruh dunia.
-        </p>
-</div>
-<!-- Photo Collage Grid -->
-<div class="grid grid-cols-3 gap-2 mb-4">
-<div class="rounded-xl overflow-hidden h-24 border border-gray-150 relative">
-<img alt="Kelas Offline" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-Sx3TjuW5CPOaKJGclLS_qjUb0zyBH8T78HJ_BSA9-N9fsd6JuGC2tJXbcGEM7zJNHxjhtA0mUhOixXW8Z8_SnhjwWyfCD4FpUsyRDNRCcUBbQOyQE0qpD4BuKvYGroZYWw_le6aqWPyl4lMUfYRfmcodMRcV-3f-damY1S_xQRILcnUblpV1fRjaHI9kSIqeAWKITU8WyA2InDVq0MQEk_kt-CfLXxd5VvfXx1n4tbHxoW1iGNchFQ"/>
-<span class="absolute bottom-1 left-1 text-[9px] font-bold bg-brand-dark/70 text-white px-1.5 py-0.2 rounded">Jakarta</span>
-</div>
-<div class="rounded-xl overflow-hidden h-24 border border-gray-150 relative">
-<img alt="Belajar Online" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAscYbZ1pYHSdfm1zBcvJ8CSRgAeQigqOTC1deOklKxoMhSHwTQ-WvGP3vvAlnIiQDdB-NRH0BZHYrwedHGKaJAqkXfi0ab7DhNhhp-CW-EtHkEK0bkb8N8TPucXcLT-E7jsp8lcOulNWHfxqgKv_Jh2I4dd90_-BHCrkb0al8O9sauVxYz1EBOYDW0asgiHvj6-wPyXAhDU_VzWdBxv0mhlf_v4T5hI9d6NCgnaWUPxIB9vLdTqXHxhg"/>
-<span class="absolute bottom-1 left-1 text-[9px] font-bold bg-brand-dark/70 text-white px-1.5 py-0.2 rounded">Online Live</span>
-</div>
-<div class="rounded-xl overflow-hidden h-24 border border-gray-150 relative">
-<img alt="Kompetisi Robotik" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9bv7OZcqpUmGZxiWFTiuHp4VPg08e4ruGR8UlRdr5mUarMdXAari4EmG7TyQjOZaQHt-iQQKtuZt6lL4LOb5jmWGAMFJBn4X3CEm-fwbB66I3a2jxQK-88BWKEWjupUA5aLpLlnOahiWwH2NbGJR69kvXZqXhIKSwOFQfw9vleH6RNVs2JqyxM8jkKNFoIL7OwHJ9eZJ0JEuGTFLnT8s0lR3Au2672zf5Ap5TemijdTfrNSGjR1jxLA"/>
-<span class="absolute bottom-1 left-1 text-[9px] font-bold bg-brand-dark/70 text-white px-1.5 py-0.2 rounded">Surabaya</span>
-</div>
-</div>
-<div class="flex items-center justify-center gap-2.5">
-<a class="px-4 py-2 rounded-full border border-brand-slate text-[12px] font-bold text-brand-slate hover:bg-gray-100" href="#branch-list">
-          Lihat Cabang Terdekat
-        </a>
-<a class="px-4 py-2 rounded-full bg-brand-dark text-white text-[12px] font-bold hover:bg-black" href="#trial-section">
-          Daftar Mitra Sekolah
-        </a>
-</div>
-</section>
-<!-- 5. WE ARE AVAILABLE FOR ONLINE / OFFLINE CLASS -->
-<section class="p-4 bg-white border-y border-gray-100">
-<div class="rounded-2xl bg-brand-peach/60 p-4 border border-brand-red/10">
-<div class="flex items-center gap-2 mb-1.5">
-<span class="material-symbols-outlined text-brand-red text-[20px]">devices</span>
-<h4 class="font-display font-extrabold text-[16px] text-brand-dark">Pilihan Belajar Online &amp; Offline</h4>
-</div>
-<p class="text-[12px] text-gray-600 leading-relaxed mb-3">
-          Siswa bisa datang langsung ke lab edukasi cabang terdekat dengan fasilitas PC &amp; robotik lengkap, atau belajar secara online live dari rumah dengan jadwal fleksibel.
-        </p>
-<div class="grid grid-cols-2 gap-2 text-[11px] font-bold mb-3">
-<div class="bg-white p-2.5 rounded-xl border border-gray-100 flex items-center gap-2">
-<span class="text-brand-red font-black">✓</span> 1-on-1 / Small Group (Max 4 Anak)
-          </div>
-<div class="bg-white p-2.5 rounded-xl border border-gray-100 flex items-center gap-2">
-<span class="text-brand-red font-black">✓</span> Modul &amp; Kit Robot Dikirim ke Rumah
-          </div>
-</div>
-<a class="w-full block text-center py-2.5 bg-brand-red text-white text-[12px] font-bold rounded-xl shadow-sm hover:bg-[#d4412e]" href="#trial-section">
-          Jadwalkan Trial Online / Offline
-        </a>
-</div>
-</section>
-<!-- 6. WHY CODING IS IMPORTANT FOR YOUNG GENERATION? (ACCORDION + PHOTO) -->
-<section class="px-4 py-6">
-<div class="mb-4">
-<span class="text-[11px] font-black uppercase text-brand-red tracking-wider">Investasi Masa Depan</span>
-<h3 class="font-display text-[20px] font-black text-brand-dark leading-tight mt-1">
-          Mengapa Coding Sangat Penting untuk Generasi Muda?
-        </h3>
-</div>
-<div class="mb-4 rounded-2xl overflow-hidden border border-gray-200">
-<img alt="Anak belajar coding dan robotik" class="w-full h-44 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRhWH3C9TXTUTdB8VWv119y86Tr8V5ME9gFZQ8cXef4QGQtaxaFHZNOIHG3hf2vFB0vnQqBLsPK-h6znbMsfVJP3Xz7oXll8KCNSiPNS7qxFcbtiJSWOgn3IbYZ_KF8gf2fWsDvhZSeCD44pDXKiJZXil7NJ9u_uE_GmqyhPsZ5-KJq0wcfNXweMiZJRUxQL7NUR9Y-tf3P2jXrbSe8Dlzkl4raX3RwQ8RcQBA8B7ougH0LkBtt0MoJg"/>
-</div>
-<!-- Interactive Accordion Items -->
-<div class="space-y-2.5" id="why-accordion">
-<!-- Item 1: From Player to Developer (Open by default) -->
-<div class="bg-white rounded-2xl border border-gray-200 p-3.5 shadow-sm">
-<button class="w-full flex items-center justify-between text-left font-display font-extrabold text-[13px] text-brand-dark" onclick="toggleWhy(this)">
-<span class="flex items-center gap-2">
-<span class="w-5 h-5 rounded-full bg-brand-red text-white text-[10px] flex items-center justify-center font-bold">1</span>
-              Dari Sekadar Pemain Jadi Pembuat Game
-            </span>
-<span class="acc-arrow material-symbols-outlined text-[18px] text-gray-500 transform rotate-180">expand_more</span>
-</button>
-<div class="acc-body mt-2.5 pt-2.5 border-t border-gray-100 text-[12px] text-gray-600 leading-relaxed">
-            Daripada hanya menghabiskan waktu bermain game secara pasif, anak diajak memahami mekanisme, alur logika, variabel, dan desain sprite game mereka sendiri. Screen-time jadi produktif dan membanggakan.
-          </div>
-</div>
-<!-- Item 2: 21st Century Skills -->
-<div class="bg-white rounded-2xl border border-gray-200 p-3.5 shadow-sm">
-<button class="w-full flex items-center justify-between text-left font-display font-extrabold text-[13px] text-brand-dark" onclick="toggleWhy(this)">
-<span class="flex items-center gap-2">
-<span class="w-5 h-5 rounded-full bg-brand-yellow text-brand-dark text-[10px] flex items-center justify-center font-bold">2</span>
-              Keterampilan Abad 21 &amp; Problem Solving
-            </span>
-<span class="acc-arrow material-symbols-outlined text-[18px] text-gray-500">expand_more</span>
-</button>
-<div class="acc-body hidden mt-2.5 pt-2.5 border-t border-gray-100 text-[12px] text-gray-600 leading-relaxed">
-            Menghadapi error atau bug pada program mengajarkan ketangguhan mental (grit), kegigihan mencari solusi, serta cara mengurai masalah besar menjadi langkah-langkah logis yang mudah dipecahkan.
-          </div>
-</div>
-<!-- Item 3: Future Foundation -->
-<div class="bg-white rounded-2xl border border-gray-200 p-3.5 shadow-sm">
-<button class="w-full flex items-center justify-between text-left font-display font-extrabold text-[13px] text-brand-dark" onclick="toggleWhy(this)">
-<span class="flex items-center gap-2">
-<span class="w-5 h-5 rounded-full bg-brand-slate text-white text-[10px] flex items-center justify-center font-bold">3</span>
-              Fondasi Karier Digital &amp; Literasi AI
-            </span>
-<span class="acc-arrow material-symbols-outlined text-[18px] text-gray-500">expand_more</span>
-</button>
-<div class="acc-body hidden mt-2.5 pt-2.5 border-t border-gray-100 text-[12px] text-gray-600 leading-relaxed">
-            Kecerdasan Buatan (AI) kini ada di mana-mana. Memahami dasar logika algoritma dan etika teknologi sejak dini memastikan anak siap bersaing secara global dalam profesi apa pun di masa depan.
-          </div>
-</div>
-</div>
-</section>
-<!-- 7. OUR CURRICULUM (JAPANESE & UK BASED GLOBAL CURRICULUM) -->
-<section class="p-4 bg-brand-peach/40 border-t border-gray-100" id="curriculum-section">
-<div class="text-center mb-4">
-<span class="text-[11px] font-black uppercase text-brand-red bg-white px-3 py-0.5 rounded-full border border-gray-200">
-          Standar Kurikulum Global
-        </span>
-<h3 class="font-display text-[21px] font-black text-brand-dark mt-1.5">
-          Kurikulum Berjenjang Kami
-        </h3>
-<p class="text-[12px] text-gray-500 max-w-xs mx-auto">
-          Disesuaikan dengan tahap perkembangan kognitif anak usia 6 hingga 18 tahun.
-        </p>
-</div>
-<!-- Curriculum Filter Tabs (Timedoor Style Pills) -->
-<div class="flex gap-1.5 overflow-x-auto pb-2 scrollbar-none mb-3">
-<button class="curr-tab px-3 py-1.5 rounded-full font-bold text-[11px] whitespace-nowrap bg-brand-dark text-white shadow-sm" onclick="filterCurriculum('junior', this)">
-          Junior Coder (SD 1-2)
-        </button>
-<button class="curr-tab px-3 py-1.5 rounded-full font-bold text-[11px] whitespace-nowrap bg-white text-gray-600 border border-gray-200" onclick="filterCurriculum('adventure', this)">
-          Game Adventure (SD 3-4)
-        </button>
-<button class="curr-tab px-3 py-1.5 rounded-full font-bold text-[11px] whitespace-nowrap bg-white text-gray-600 border border-gray-200" onclick="filterCurriculum('python', this)">
-          Python &amp; AI (SD 5-6)
-        </button>
-<button class="curr-tab px-3 py-1.5 rounded-full font-bold text-[11px] whitespace-nowrap bg-white text-gray-600 border border-gray-200" onclick="filterCurriculum('robot', this)">
-          Robotik &amp; IoT
-        </button>
-</div>
-<!-- Colorful Curriculum Cards Grid (Timedoor Style) -->
-<div class="grid grid-cols-2 gap-3" id="curr-cards">
-<!-- Card 1: Little Programmer -->
-<div class="bg-[#10B981] text-white rounded-2xl p-3.5 shadow-md flex flex-col justify-between h-36 relative overflow-hidden">
-<div class="absolute -right-4 -bottom-4 w-16 h-16 rounded-full bg-white/10"></div>
-<div>
-<div class="flex items-center justify-between mb-1">
-<span class="text-2xl">🐱</span>
-<span class="text-[9px] font-bold bg-white/20 px-1.5 py-0.5 rounded">Usia 6-8 th</span>
-</div>
-<h4 class="font-display font-extrabold text-[14px] leading-tight mt-1">Little Programmer</h4>
-<p class="text-[10px] text-white/90 mt-0.5">Scratch Jr, logika warna, dongeng interaktif.</p>
-</div>
-<a class="text-[10px] font-bold inline-flex items-center gap-1 text-white underline" href="#trial-section">
-            Lihat Detail →
-          </a>
-</div>
-<!-- Card 2: Virtual World Maker -->
-<div class="bg-[#3B82F6] text-white rounded-2xl p-3.5 shadow-md flex flex-col justify-between h-36 relative overflow-hidden">
-<div class="absolute -right-4 -bottom-4 w-16 h-16 rounded-full bg-white/10"></div>
-<div>
-<div class="flex items-center justify-between mb-1">
-<span class="text-2xl">🧱</span>
-<span class="text-[9px] font-bold bg-white/20 px-1.5 py-0.5 rounded">Usia 8-11 th</span>
-</div>
-<h4 class="font-display font-extrabold text-[14px] leading-tight mt-1">Virtual World Maker</h4>
-<p class="text-[10px] text-white/90 mt-0.5">Roblox Studio, 3D modeling, game physics.</p>
-</div>
-<a class="text-[10px] font-bold inline-flex items-center gap-1 text-white underline" href="#trial-section">
-            Lihat Detail →
-          </a>
-</div>
-<!-- Card 3: Web & App Designer -->
-<div class="bg-[#8B5CF6] text-white rounded-2xl p-3.5 shadow-md flex flex-col justify-between h-36 relative overflow-hidden">
-<div class="absolute -right-4 -bottom-4 w-16 h-16 rounded-full bg-white/10"></div>
-<div>
-<div class="flex items-center justify-between mb-1">
-<span class="text-2xl">💻</span>
-<span class="text-[9px] font-bold bg-white/20 px-1.5 py-0.5 rounded">Usia 10-14 th</span>
-</div>
-<h4 class="font-display font-extrabold text-[14px] leading-tight mt-1">Web &amp; App Designer</h4>
-<p class="text-[10px] text-white/90 mt-0.5">HTML, CSS, UI dasar &amp; visual app building.</p>
-</div>
-<a class="text-[10px] font-bold inline-flex items-center gap-1 text-white underline" href="#trial-section">
-            Lihat Detail →
-          </a>
-</div>
-<!-- Card 4: Robot Maker & IoT -->
-<div class="bg-[#EA533E] text-white rounded-2xl p-3.5 shadow-md flex flex-col justify-between h-36 relative overflow-hidden">
-<div class="absolute -right-4 -bottom-4 w-16 h-16 rounded-full bg-white/10"></div>
-<div>
-<div class="flex items-center justify-between mb-1">
-<span class="text-2xl">🤖</span>
-<span class="text-[9px] font-bold bg-white/20 px-1.5 py-0.5 rounded">Usia 7-15 th</span>
-</div>
-<h4 class="font-display font-extrabold text-[14px] leading-tight mt-1">Robot Maker &amp; IoT</h4>
-<p class="text-[10px] text-white/90 mt-0.5">Micro:bit, sensor ultrasonik &amp; motorik kit.</p>
-</div>
-<a class="text-[10px] font-bold inline-flex items-center gap-1 text-white underline" href="#trial-section">
-            Lihat Detail →
-          </a>
-</div>
-</div>
-</section>
-<!-- 8. WHY STUDY WITH RAKIT AI? (3 PHOTO CARDS) -->
-<section class="p-4 bg-white">
-<div class="text-center mb-4">
-<h3 class="font-display text-[20px] font-black text-brand-dark">
-          Mengapa Belajar di Rakit AI?
-        </h3>
-<p class="text-[12px] text-gray-500">Standar pendidikan terpercaya untuk mencetak kreator cilik tangguh.</p>
-</div>
-<div class="space-y-3">
-<!-- Card 1 -->
-<div class="relative rounded-2xl overflow-hidden shadow-md h-36">
-<img alt="Kurikulum Jepang" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmrabeR7E2vaDSUyCTkv5zVsh3A7tWhQKkHBMPAdo5LBblPAzRkrxNcUBdPZFTgC2ZuGLsF-tuet8p0ykEnjXqlrv5tGKlMPtR_W7UNGqXI2DHYVDA5ioGCZ1N2u0BMPIPMaNviEIk4UAeH4-LouDY5LxAeciiaXjxyWbDJisMv6tctA3jupmAspke42mc8eoht4LUEueL-nbD4EbHwXbtmcuv0-e7v9ct0GZqmlL6ebx4Sv57FS-XPA"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 flex flex-col justify-end">
-<span class="text-brand-yellow text-[11px] font-black uppercase">01. Kurikulum Terstruktur</span>
-<h4 class="text-white font-display font-bold text-[14px]">Kurikulum Standar Global Jepang &amp; UK</h4>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="relative rounded-2xl overflow-hidden shadow-md h-36">
-<img alt="Mentor IT Berpengalaman" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiBbN0yG8UqACaS1LLjVeRNdu9pVsFBTa1oWltBMneTp3Xv5jywwjb0K_v_El2jxXymu2-EdelkJLc1a9qoNHkJZvSA9pnfC7_lgdRYvz_XrQnKKV7KtdCY_GPJdBMCccPNYxi8iF7en7aX-m9cJmvTMNqipnneXzqRAQdRNA9beDjlKAzRjOh9yTosyok7VldSwtCBnq_ndYWgUmIwL4fzI9z6-XxkKHYJTXQgSmr2zFn49M-GIK6aw"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 flex flex-col justify-end">
-<span class="text-brand-yellow text-[11px] font-black uppercase">02. Mentor Spesialis IT</span>
-<h4 class="text-white font-display font-bold text-[14px]">Didampingi Pengajar Sabar &amp; Berpengalaman</h4>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="relative rounded-2xl overflow-hidden shadow-md h-36">
-<img alt="10,000+ Siswa" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdHEmthufmgheAYSTfn49tZDOYWzGU4reD7M4dMTswkmnsQ9X5DS1jkbqYClDCCVM3c9xIdAsJKbRp6e9X0HeB5RW3IZQv0_fLoybSRmLWZac0W07Ixklsh4FifvkKgIxIlrzu2l_gkl2xLM5pY63Kf5SeKoIw9jruNvL__izJaguMJknNLW-swrjWA6qdcY4hVD4zh7Yn95kD0fs-vZMLwrl9B9GSlMHaHhu6Kw2s-HqlgeuQCoDpYA"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 flex flex-col justify-end">
-<span class="text-brand-yellow text-[11px] font-black uppercase">03. Komunitas Terbesar</span>
-<h4 class="text-white font-display font-bold text-[14px]">10.000+ Siswa di Indonesia &amp; Mancanegara</h4>
-</div>
-</div>
-</div>
-</section>
-<!-- 9. CERTIFIED GLOBAL TEACHER / MENTOR (CAROUSEL) -->
-<section class="p-4 bg-brand-softblue/50 border-y border-gray-100">
-<div class="flex items-center justify-between mb-3">
-<div>
-<span class="text-[10px] font-extrabold uppercase text-blue-600 bg-blue-100 px-2 py-0.5 rounded">Mentor Bersertifikasi</span>
-<h3 class="font-display text-[18px] font-extrabold text-brand-dark mt-1">Certified Global Teacher</h3>
-</div>
-<span class="text-[11px] text-blue-600 font-bold">Geser →</span>
-</div>
-<div class="flex gap-3 overflow-x-auto pb-2 scrollbar-none snap-x snap-mandatory">
-<!-- Mentor 1: Mr. Mordy -->
-<div class="min-w-[190px] max-w-[190px] snap-center bg-white rounded-2xl p-3 border border-gray-200 shadow-sm text-center flex flex-col items-center">
-<img alt="Mr. Mordy" class="w-16 h-16 rounded-full object-cover border-2 border-blue-400 mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYeElR5M9ueJod8WYxmTiARFH2F0a9zjb2p34OLU0PeZCjyPlWV-frAXgCtNXABv0YGwOHBOTraTwi7YwUgvoTo4qxkNcnGqRua0nUlw6VI-JFfPvO-7rQhxSei6h_Yr6UV3Ff6YnSnbABEfybgKjVRAHxT3NtMy-SEyvfFDkb5KpCyfer98qFGN70h1tfuWg_Qyk9ipimmt6aqGclU_Kyz9RmJStGLO7QwK1m2kH6kdT5X5PpiUfEdw"/>
-<h4 class="font-bold text-[13px] text-brand-dark">Mr. Dimas Satria</h4>
-<p class="text-[10px] text-gray-500 font-medium">Institut Teknologi Bandung</p>
-<span class="inline-block mt-1 text-[9px] font-extrabold bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">Robotics Specialist</span>
-<a class="mt-2 text-[10px] text-blue-600 font-bold hover:underline" href="#">Lihat profil →</a>
-</div>
-<!-- Mentor 2: Mr. Ishmam -->
-<div class="min-w-[190px] max-w-[190px] snap-center bg-white rounded-2xl p-3 border border-gray-200 shadow-sm text-center flex flex-col items-center">
-<img alt="Mr. Ishmam" class="w-16 h-16 rounded-full object-cover border-2 border-emerald-400 mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCakoJPRX75qO4lyjwx0nWi_lstTCZgvH8Ru1XtoKeM1DxgLnhyqRKrzoMPFtudvIuXR82k5-h47VEOasheGLGi74Y1SAgEEvtVK8kC-7WFwRH7pRmU69S0NRY9O0YJ_sqy1f-KP1jL-2ctf8ZFyd1VGgeVJTBDE8iOk4WRpJWFrcm3O-6o1S2VdjNpzuBf49N05uoaAdBLeYi5fXdXfMa5Sad9OUUrmqs5Q0hYlQ2mlDiUTWByYbmWnA"/>
-<h4 class="font-bold text-[13px] text-brand-dark">Mr. Ishmam</h4>
-<p class="text-[10px] text-gray-500 font-medium">American Int. University</p>
-<span class="inline-block mt-1 text-[9px] font-extrabold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full">Python &amp; AI Coach</span>
-<a class="mt-2 text-[10px] text-emerald-600 font-bold hover:underline" href="#">Lihat profil →</a>
-</div>
-<!-- Mentor 3: Miss Mia -->
-<div class="min-w-[190px] max-w-[190px] snap-center bg-white rounded-2xl p-3 border border-gray-200 shadow-sm text-center flex flex-col items-center">
-<img alt="Miss Sarah" class="w-16 h-16 rounded-full object-cover border-2 border-brand-red mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyj3o5AFpFERxy6K4t1dXuwK769Ex7ow-IqB1tMpdbSxJO8Y4Fh2ybCetqVvl56zo19Nw3GmUNVovcrtIeVC5ixcJv3E6dDgdu-cYVRl8qAUEXUzR5G_01hN9VAeHql1hAaueZWySF4KlIrQUqHT77eiR6F6buDnnAXdoJKUSPcVvVo1wbNUlv7o2BoHh_4blpDVBW4kX_nrrgBjSsk5NTK8_jRyOfN54nGyAmlzy7J8u2B2ClI4-6xQ"/>
-<h4 class="font-bold text-[13px] text-brand-dark">Miss Sarah Anjani</h4>
-<p class="text-[10px] text-gray-500 font-medium">Monash University</p>
-<span class="inline-block mt-1 text-[9px] font-extrabold bg-red-50 text-brand-red px-2 py-0.5 rounded-full">Game Dev &amp; Visual Code</span>
-<a class="mt-2 text-[10px] text-brand-red font-bold hover:underline" href="#">Lihat profil →</a>
-</div>
-</div>
-</section>
-<!-- 10. STUDENT SUCCESS BANNER (TIMEDOOR GREEN SHOWCASE) -->
-<section class="p-4">
-<div class="bg-[#10B981] text-white rounded-3xl p-4 shadow-md relative overflow-hidden">
-<div class="flex items-center justify-between mb-2">
-<span class="bg-black/20 text-[10px] font-bold px-2 py-0.5 rounded-full">Juara Internasional</span>
-<span class="text-xs">🏆</span>
-</div>
-<div class="flex gap-3 items-center">
-<img alt="Juara Coding" class="w-18 h-18 w-16 h-16 rounded-2xl object-cover border-2 border-white shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBQsQHdPVm8EqDM_0_pREQG2A94BCDYayLoGJsAk1cru0_01JIUNvHyMGbkTOEZGQ_Vk1t9xeTtlhKxdZud13dX5ruSFregm_eIaoF6XZ8iniZhzaqNpIwoL6BprqzO8kHyECSv-MzvoPKlkcFPyqao1qRm2mcRaxXjRabdFf4Fib12o38D3o45pwGh7_0cYBD1CwocphTlbNTYHv63KdzClY27NHhH6bKsY3jbrsMv4H9dHeLMBXHPw"/>
-<div>
-<h4 class="font-display font-extrabold text-[14px] leading-tight">Jaden Edward Jaya</h4>
-<p class="text-[10px] text-white/90 mt-0.5">Judges Award - International Scratch Olympiad 2025</p>
-<p class="text-[11px] text-white/80 italic mt-1 leading-snug">"Terima kasih mentor Rakit AI yang selalu membimbing ide game saya jadi nyata!"</p>
-</div>
-</div>
-</div>
-</section>
-<!-- 11. STUDENT PROJECT PORTFOLIO (REAL GAME MOCKUPS) -->
-<section class="p-4 bg-white">
-<div class="flex items-center justify-between mb-3">
-<div>
-<span class="text-[10px] font-extrabold text-brand-red uppercase bg-brand-peach px-2 py-0.5 rounded">100% Karya Anak</span>
-<h3 class="font-display text-[18px] font-extrabold text-brand-dark mt-1">Student Project Portfolio</h3>
-</div>
-<span class="text-[11px] text-brand-red font-bold">Geser →</span>
-</div>
-<div class="flex gap-3 overflow-x-auto pb-2 scrollbar-none snap-x snap-mandatory">
-<!-- Project 1 -->
-<div class="min-w-[210px] max-w-[210px] snap-center rounded-2xl border border-gray-200 p-3 bg-gray-50 flex flex-col justify-between">
-<div>
-<div class="h-24 w-full bg-slate-800 rounded-xl mb-2 flex items-center justify-center text-3xl overflow-hidden relative">
-<span class="select-none">🐊 🦌</span>
-<span class="absolute top-1.5 left-1.5 bg-yellow-400 text-slate-900 text-[9px] font-black px-1.5 py-0.2 rounded">Scratch</span>
-</div>
-<span class="text-[9px] font-bold uppercase text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">Web Game</span>
-<h4 class="font-bold text-[12px] text-brand-dark mt-1">Kancil &amp; Buaya Runner</h4>
-<p class="text-[10px] text-gray-500">Oleh Bima (10 th, Kelas 5 SD)</p>
-</div>
-<button class="mt-2.5 w-full py-1.5 bg-brand-dark text-white rounded-lg text-[10px] font-bold hover:bg-brand-slate flex items-center justify-center gap-1" onclick="alert('Memuat Game Kancil Runner buatan Bima! 🎮')">
-<span>Mainkan Demo</span>
-<span class="material-symbols-outlined text-[13px]">play_circle</span>
-</button>
-</div>
-<!-- Project 2 -->
-<div class="min-w-[210px] max-w-[210px] snap-center rounded-2xl border border-gray-200 p-3 bg-gray-50 flex flex-col justify-between">
-<div>
-<div class="h-24 w-full bg-brand-red rounded-xl mb-2 flex items-center justify-center text-3xl overflow-hidden relative">
-<span class="select-none">🤖 ⚡ 🗑️</span>
-<span class="absolute top-1.5 left-1.5 bg-white text-brand-red text-[9px] font-black px-1.5 py-0.2 rounded">Roblox Lua</span>
-</div>
-<span class="text-[9px] font-bold uppercase text-blue-700 bg-blue-100 px-1.5 py-0.5 rounded">3D Game</span>
-<h4 class="font-bold text-[12px] text-brand-dark mt-1">Robot Penyelamat Sampah</h4>
-<p class="text-[10px] text-gray-500">Oleh Nadia (9 th, Kelas 4 SD)</p>
-</div>
-<button class="mt-2.5 w-full py-1.5 bg-brand-dark text-white rounded-lg text-[10px] font-bold hover:bg-brand-slate flex items-center justify-center gap-1" onclick="alert('Memuat Game Robot Penyelamat buatan Nadia! 🤖')">
-<span>Mainkan Demo</span>
-<span class="material-symbols-outlined text-[13px]">play_circle</span>
-</button>
-</div>
-<!-- Project 3 -->
-<div class="min-w-[210px] max-w-[210px] snap-center rounded-2xl border border-gray-200 p-3 bg-gray-50 flex flex-col justify-between">
-<div>
-<div class="h-24 w-full bg-indigo-900 rounded-xl mb-2 flex items-center justify-center text-3xl overflow-hidden relative">
-<span class="select-none">🚀 👾 ☄️</span>
-<span class="absolute top-1.5 left-1.5 bg-emerald-400 text-slate-900 text-[9px] font-black px-1.5 py-0.2 rounded">Python</span>
-</div>
-<span class="text-[9px] font-bold uppercase text-purple-700 bg-purple-100 px-1.5 py-0.5 rounded">AI Classifier</span>
-<h4 class="font-bold text-[12px] text-brand-dark mt-1">Space Dodgeball AI</h4>
-<p class="text-[10px] text-gray-500">Oleh Kevin (11 th, Kelas 6 SD)</p>
-</div>
-<button class="mt-2.5 w-full py-1.5 bg-brand-dark text-white rounded-lg text-[10px] font-bold hover:bg-brand-slate flex items-center justify-center gap-1" onclick="alert('Memuat Game Space Dodgeball buatan Kevin! 🚀')">
-<span>Mainkan Demo</span>
-<span class="material-symbols-outlined text-[13px]">play_circle</span>
-</button>
-</div>
-</div>
-</section>
-<!-- 12. PARTNERS AND CERTIFICATIONS (LOGOS ROW) -->
-<section class="px-4 py-5 bg-[#F8F9FD] border-t border-gray-200 text-center">
-<h4 class="text-[11px] font-extrabold uppercase tracking-wider text-gray-400 mb-3">
-        Partners &amp; Global Certifications
-      </h4>
-<div class="grid grid-cols-4 gap-2.5 items-center justify-center opacity-75 grayscale hover:grayscale-0 transition-all">
-<div class="bg-white p-2 rounded-xl border border-gray-200 text-center font-bold text-[11px] text-gray-700">Scratch</div>
-<div class="bg-white p-2 rounded-xl border border-gray-200 text-center font-bold text-[11px] text-gray-700">Roblox</div>
-<div class="bg-white p-2 rounded-xl border border-gray-200 text-center font-bold text-[11px] text-gray-700">Pearson</div>
-<div class="bg-white p-2 rounded-xl border border-gray-200 text-center font-bold text-[11px] text-gray-700">AWS Kids</div>
-</div>
-</section>
-<!-- 13. FREQUENTLY ASKED QUESTIONS (TIMEDOOR STYLE ACCORDION) -->
-<section class="p-4 bg-white border-t border-gray-200">
-<div class="text-center mb-4">
-<span class="text-[10px] font-extrabold text-brand-dark bg-gray-100 px-2.5 py-0.5 rounded-full uppercase">FAQ</span>
-<h3 class="font-display text-[20px] font-black text-brand-dark mt-1">
-          Pertanyaan Sering Diajukan
-        </h3>
-<p class="text-[11px] text-gray-500">Semua info yang Ayah Bunda butuhkan sebelum mendaftar.</p>
-</div>
-<div class="space-y-2" id="faq-list">
-<!-- Q1 -->
-<div class="rounded-xl border border-gray-200 p-3 bg-gray-50">
-<button class="w-full flex items-center justify-between text-left font-bold text-[12.5px] text-brand-dark" onclick="toggleFaq(this)">
-<span>Apakah tersedia kelas coba gratis (Free Trial)?</span>
-<span class="material-symbols-outlined text-[18px] text-gray-500">expand_more</span>
-</button>
-<div class="faq-ans hidden mt-2 pt-2 border-t border-gray-200 text-[11.5px] text-gray-600 leading-relaxed">
-            Ya! Kami menyediakan sesi 1x Free Trial selama 60 menit secara online maupun offline di cabang untuk menguji minat dan bakat anak.
-          </div>
-</div>
-<!-- Q2 -->
-<div class="rounded-xl border border-gray-200 p-3 bg-gray-50">
-<button class="w-full flex items-center justify-between text-left font-bold text-[12.5px] text-brand-dark" onclick="toggleFaq(this)">
-<span>Berapa usia minimal untuk bergabung?</span>
-<span class="material-symbols-outlined text-[18px] text-gray-500">expand_more</span>
-</button>
-<div class="faq-ans hidden mt-2 pt-2 border-t border-gray-200 text-[11.5px] text-gray-600 leading-relaxed">
-            Program kami dirancang untuk anak mulai usia 6 tahun (Kelas 1 SD) hingga 18 tahun (SMA) dengan silabus bertingkat.
-          </div>
-</div>
-<!-- Q3 -->
-<div class="rounded-xl border border-gray-200 p-3 bg-gray-50">
-<button class="w-full flex items-center justify-between text-left font-bold text-[12.5px] text-brand-dark" onclick="toggleFaq(this)">
-<span>Bagaimana jadwal kelas dan fleksibilitasnya?</span>
-<span class="material-symbols-outlined text-[18px] text-gray-500">expand_more</span>
-</button>
-<div class="faq-ans hidden mt-2 pt-2 border-t border-gray-200 text-[11.5px] text-gray-600 leading-relaxed">
-            Jadwal sangat fleksibel, tersedia sesi weekdays sore maupun weekend (Sabtu-Minggu pagi/siang). Kelas yang terlewat dapat dijadwalkan ulang.
-          </div>
-</div>
-</div>
-</section>
-<!-- 14. BOOK FREE TRIAL CARD FORM (CONVERSION BLOCK) -->
-<section class="p-4" id="trial-section">
-<div class="bg-gradient-to-br from-brand-dark via-[#1E2838] to-[#111823] text-white rounded-3xl p-5 shadow-xl border border-gray-700">
-<div class="inline-block px-2.5 py-0.5 rounded-full bg-brand-yellow text-brand-dark font-black text-[10px] uppercase mb-2">
-          Pendaftaran Terbatas
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full overflow-hidden pt-10 md:pt-20 pb-32">
+        
+        <div class="absolute inset-0 bg-white -z-20"></div>
+        
+        <div class="absolute top-0 right-0 w-[40%] h-full -z-10 opacity-30">
+            <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100 0 L100 100 L0 100 C 30 80, 20 50, 50 20 Z" fill="#E84E38"/>
+            </svg>
         </div>
-<h3 class="font-display text-[22px] font-black leading-tight mb-1">
-          Coba Kelas Trial Gratis Sekarang!
-        </h3>
-<p class="text-[12px] text-gray-300 mb-4 leading-relaxed">
-          Pilih lokasi belajar (Online atau Offline) dan tim konsultan edukasi kami akan menghubungi via WhatsApp dalam 24 jam.
-        </p>
-<form class="space-y-2.5" onsubmit="event.preventDefault(); alert('Pendaftaran Trial Berhasil! Admin Rakit AI akan segera mengirim link konfirmasi ke WhatsApp Anda.');">
-<div>
-<label class="block text-[10.5px] font-bold text-gray-300 mb-1">Nama Lengkap Anak</label>
-<input class="w-full bg-white/10 border border-white/20 rounded-xl px-3 py-2 text-[12px] text-white placeholder-gray-400 focus:outline-none focus:border-brand-yellow" placeholder="Contoh: Bima Raditya" required="" type="text"/>
-</div>
-<div class="grid grid-cols-2 gap-2">
-<div>
-<label class="block text-[10.5px] font-bold text-gray-300 mb-1">Usia Anak</label>
-<select class="w-full bg-white/10 border border-white/20 rounded-xl px-2.5 py-2 text-[12px] text-white focus:outline-none focus:border-brand-yellow">
-<option class="text-black" value="6-7">6 - 7 tahun</option>
-<option class="text-black" selected="" value="8-9">8 - 9 tahun</option>
-<option class="text-black" value="10-12">10 - 12 tahun</option>
-<option class="text-black" value="13+">13 - 18 tahun</option>
-</select>
-</div>
-<div>
-<label class="block text-[10.5px] font-bold text-gray-300 mb-1">Metode Kelas</label>
-<select class="w-full bg-white/10 border border-white/20 rounded-xl px-2.5 py-2 text-[12px] text-white focus:outline-none focus:border-brand-yellow">
-<option class="text-black" value="online">Online Live</option>
-<option class="text-black" value="jakarta">Cabang Jakarta</option>
-<option class="text-black" value="surabaya">Cabang Surabaya</option>
-<option class="text-black" value="bandung">Cabang Bandung</option>
-<option class="text-black" value="bali">Cabang Bali</option>
-</select>
-</div>
-</div>
-<div>
-<label class="block text-[10.5px] font-bold text-gray-300 mb-1">Nomor WhatsApp Orang Tua</label>
-<input class="w-full bg-white/10 border border-white/20 rounded-xl px-3 py-2 text-[12px] text-white placeholder-gray-400 focus:outline-none focus:border-brand-yellow" placeholder="08xxxxxxxxxx" required="" type="tel"/>
-</div>
-<button class="w-full py-3 bg-brand-red hover:bg-[#d6412d] text-white font-display font-extrabold text-[13px] rounded-xl shadow-lg active:scale-98 transition-all mt-2" type="submit">
-            Klaim 1x Free Trial Class (60 Menit) →
-          </button>
-</form>
-</div>
-</section>
-<!-- 15. OUR BRANCH LIST (ACCORDION SECTION AS IN TIMEDOOR FOOTER) -->
-<section class="px-4 py-4 bg-brand-dark text-white text-[12px]" id="branch-list">
-<div class="border-b border-gray-800 pb-3 mb-3">
-<h4 class="font-display font-bold text-[14px] text-brand-yellow mb-2">Kantor Cabang Kami</h4>
-<div class="grid grid-cols-2 gap-2 text-[11px] text-gray-300">
-<div>
-<p class="font-bold text-white">🇮🇩 Jakarta Selatan</p>
-<p class="text-gray-400">Pondok Indah Plaza 2, Lt. 3</p>
-</div>
-<div>
-<p class="font-bold text-white">🇮🇩 Surabaya Barat</p>
-<p class="text-gray-400">Pakuwon City Center</p>
-</div>
-<div>
-<p class="font-bold text-white">🇮🇩 Bandung</p>
-<p class="text-gray-400">Dago Heritage Tech Hub</p>
-</div>
-<div>
-<p class="font-bold text-white">🇮🇩 Bali</p>
-<p class="text-gray-400">Sunset Road No. 88, Kuta</p>
-</div>
-</div>
-</div>
-<!-- Quick Nav Links -->
-<div class="grid grid-cols-2 gap-4 text-[11px] text-gray-400 pb-3 border-b border-gray-800">
-<div>
-<span class="font-bold text-white block mb-1">Program Kursus</span>
-<p>Junior Coder (Scratch Jr)</p>
-<p>Roblox &amp; Game Dev</p>
-<p>Python AI &amp; Data</p>
-<p>Robotik &amp; IoT Kids</p>
-</div>
-<div>
-<span class="font-bold text-white block mb-1">Rakit AI Kids</span>
-<p>Tentang Kami</p>
-<p>Karir Guru &amp; Mentor</p>
-<p>Kemitraan Sekolah</p>
-<p>Kebijakan Privasi Anak</p>
-</div>
-</div>
-<div class="pt-3 text-center text-[10px] text-gray-500">
-        © 2026 PT Rakit AI Nusantara • Inspired by Global Standard Edutech
-      </div>
-</section>
-</main>
-<!-- FLOATING WHATSAPP CHAT BUTTON (TIMEDOOR STYLE) -->
-<a aria-label="Chat WhatsApp Admin" class="fixed right-4 bottom-20 z-40 bg-[#25D366] text-white p-3 rounded-full shadow-[0_4px_16px_rgba(37,211,102,0.4)] flex items-center justify-center hover:scale-105 active:scale-95 transition-transform" href="https://wa.me/6281234567890" rel="noopener" target="_blank">
-<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
-<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
-</svg>
-</a>
-<!-- BOTTOM MOBILE NAVIGATION BAR -->
-<nav class="fixed bottom-0 w-full z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg">
-<div class="flex justify-around items-center h-15 max-w-[480px] mx-auto px-2">
-<a class="flex flex-col items-center justify-center py-1 text-brand-red font-bold" href="#">
-<span class="material-symbols-outlined text-[22px]">home</span>
-<span class="text-[10px] mt-0.5">Beranda</span>
-</a>
-<a class="flex flex-col items-center justify-center py-1 text-gray-400 hover:text-brand-dark" href="#curriculum-section">
-<span class="material-symbols-outlined text-[22px]">school</span>
-<span class="text-[10px] mt-0.5">Kurikulum</span>
-</a>
-<a class="flex flex-col items-center justify-center py-1 text-gray-400 hover:text-brand-dark" href="#trial-section">
-<span class="material-symbols-outlined text-[22px]">edit_calendar</span>
-<span class="text-[10px] mt-0.5">Free Trial</span>
-</a>
-<a class="flex flex-col items-center justify-center py-1 text-gray-400 hover:text-brand-dark" href="#branch-list">
-<span class="material-symbols-outlined text-[22px]">location_on</span>
-<span class="text-[10px] mt-0.5">Cabang</span>
-</a>
-</div>
-</nav>
-<!-- JAVASCRIPT MICRO-INTERACTIONS -->
-<script>
-    function toggleWhy(btn) {
-      const parent = btn.parentElement;
-      const body = parent.querySelector('.acc-body');
-      const arrow = btn.querySelector('.acc-arrow');
-      const isHidden = body.classList.contains('hidden');
 
-      // Close all in why-accordion
-      document.querySelectorAll('#why-accordion .acc-body').forEach(b => b.classList.add('hidden'));
-      document.querySelectorAll('#why-accordion .acc-arrow').forEach(a => a.classList.remove('rotate-180'));
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
+                
+                <div class="flex-1 text-center md:text-left">
+                    
+                    <div class="inline-flex items-center gap-2 bg-[#FF9B85] text-white px-4 py-2 rounded-full mb-4 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                        <span class="text-[10px] font-black tracking-widest uppercase">IT, AI & Coding School</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-brand-navy tracking-tight leading-[1.15] mb-4">
+                        Coding Today,<br/>
+                        <span class="text-brand-orange relative inline-block">
+                            Leading Tomorrow
+                            <svg class="absolute -bottom-2 left-0 w-full h-3 text-brand-orange/30" preserveaspectratio="none" viewbox="0 0 100 10"><path d="M0 5 Q 50 0 100 5" fill="transparent" stroke="currentColor" stroke-width="4"></path></svg>
+                        </span>
+                    </h1>
+                    
+                    <p class="text-sm md:text-base text-gray-500 font-medium leading-relaxed max-w-lg mx-auto md:mx-0 mb-8">
+                        Mempersiapkan masa depan anak usia 5–18 tahun lewat kurikulum berstandar internasional dari <strong class="text-gray-700">UK & Jepang</strong> dengan metode yang menyenangkan.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start mb-8">
+                        <a class="bg-brand-orange hover:bg-brand-orangeHover text-white text-sm font-black py-3.5 px-8 rounded-full shadow-lg shadow-orange-500/25 uppercase tracking-wider flex items-center justify-center gap-2 transition-all active:scale-95" href="#trial">
+                            <span>Daftar Free Trial</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </a>
+                        <a class="bg-white hover:bg-gray-50 text-brand-navy border-2 border-brand-navy text-sm font-bold py-3.5 px-8 rounded-full transition-all active:scale-95" href="#programs">
+                            Lihat Pilihan Program
+                        </a>
+                    </div>
 
-      if (isHidden) {
-        body.classList.remove('hidden');
-        arrow.classList.add('rotate-180');
-      }
-    }
+                    <div class="grid grid-cols-3 gap-2 md:gap-4 max-w-md mx-auto md:mx-0">
+                        <div class="bg-white p-3 rounded-xl border border-gray-100 shadow-sm text-center">
+                            <span class="block text-lg font-black text-brand-orange">+10.000</span>
+                            <span class="text-[10px] font-bold text-gray-500">Siswa Aktif</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-gray-100 shadow-sm text-center">
+                            <span class="block text-lg font-black text-brand-navy">40+ Cabang</span>
+                            <span class="text-[10px] font-bold text-gray-500">& Online</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-gray-100 shadow-sm text-center">
+                            <span class="block text-lg font-black text-brand-orange">UK & Jepang</span>
+                            <span class="text-[10px] font-bold text-gray-500">Kurikulum</span>
+                        </div>
+                    </div>
+                </div>
 
-    function toggleFaq(btn) {
-      const parent = btn.parentElement;
-      const ans = parent.querySelector('.faq-ans');
-      const icon = btn.querySelector('.material-symbols-outlined');
-      if (ans.classList.contains('hidden')) {
-        ans.classList.remove('hidden');
-        icon.classList.add('rotate-180');
-      } else {
-        ans.classList.add('hidden');
-        icon.classList.remove('rotate-180');
-      }
-    }
+                <div class="flex-1 w-full relative z-20">
+                    <img src="/codingkid.png" alt="Anak belajar coding dan HTML" class="w-full h-auto object-contain animate-float drop-shadow-2xl transition-transform duration-500 hover:scale-105" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-    function filterCurriculum(type, btn) {
-      const tabs = document.querySelectorAll('.curr-tab');
-      tabs.forEach(t => {
-        t.className = 'curr-tab px-3 py-1.5 rounded-full font-bold text-[11px] whitespace-nowrap bg-white text-gray-600 border border-gray-200';
-      });
-      btn.className = 'curr-tab px-3 py-1.5 rounded-full font-bold text-[11px] whitespace-nowrap bg-brand-dark text-white shadow-sm';
-    }
-  </script>
-</body></html>
+    <!-- ================= GELOMBANG PEMISAH 1 (Putih ke Abu) ================= -->
+    <div class="relative w-full h-[80px] md:h-[120px] -mt-24 z-10">
+        <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120 L0 60 C 320 0, 640 100, 960 60 C 1120 40, 1280 80, 1440 60 L1440 120 Z" fill="#FCFDFE"/>
+        </svg>
+    </div>
+
+    <!-- ================= WHY US (4 Pillars) ================= -->
+    <section class="relative w-full overflow-hidden pt-16 pb-32 mt-10 bg-brand-bgLight">
+        
+        <div class="absolute top-0 right-0 w-[80%] h-full -z-20 opacity-30">
+            <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 100 C 30 80, 50 30, 100 0 L100 100 Z" fill="#BAE6FD"/>
+            </svg>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 w-full h-[70%] -z-10">
+            <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 40 Q 20 20, 40 40 T 100 40 L100 100 L0 100 Z" fill="#E84E38"/>
+            </svg>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-32 md:w-48 opacity-90 animate-float z-0 pointer-events-none">
+            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" alt="Robot" class="w-full h-auto drop-shadow-xl" />
+        </div>
+        
+        <div class="absolute bottom-0 right-0 w-24 md:w-40 opacity-90 animate-float z-0 pointer-events-none" style="animation-delay: 1s;">
+            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Bear.png" alt="Bear" class="w-full h-auto drop-shadow-xl" />
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <span class="text-[10px] font-black uppercase tracking-widest text-brand-orange bg-orange-50 border border-orange-100 px-3 py-1 rounded-full">Keunggulan Kami</span>
+                <h2 class="text-3xl md:text-4xl font-black text-brand-navy mt-3">More Than Just A <span class="text-brand-orange">Coding School</span></h2>
+                <p class="text-sm text-gray-500 mt-2 max-w-xl mx-auto">Bukan hanya belajar sintaks, kami membekali anak dengan logika berpikir, AI tools, dan kreativitas digital masa depan.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-card flex flex-col transform hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3 text-2xl">🌍</div>
+                    <h3 class="font-black text-sm md:text-base text-brand-navy mb-1.5">Kurikulum Global</h3>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium">Standar UK & Jepang yang disusun sistematis dan progresif.</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-card flex flex-col transform hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-orange-50 text-brand-orange flex items-center justify-center mb-3 text-2xl">🎮</div>
+                    <h3 class="font-black text-sm md:text-base text-brand-navy mb-1.5">Game-Based</h3>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium">Scratch, Roblox, Python, hingga Website yang seru & aplikatif.</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-card flex flex-col transform hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center mb-3 text-2xl">👩‍🏫</div>
+                    <h3 class="font-black text-sm md:text-base text-brand-navy mb-1.5">Mentor Bersertifikat</h3>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium">Guru ramah, suportif, dan terlatih membimbing setiap anak.</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-card flex flex-col transform hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-3 text-2xl">💡</div>
+                    <h3 class="font-black text-sm md:text-base text-brand-navy mb-1.5">Future Skills</h3>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium">Problem solving, logika kritis, kreativitas, dan kepemimpinan digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= GELOMBANG PEMISAH 2 (Abu ke Putih) ================= -->
+    <div class="relative w-full h-[80px] md:h-[120px] -mt-24 z-10">
+        <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120 L0 60 C 320 0, 640 100, 960 60 C 1120 40, 1280 80, 1440 60 L1440 120 Z" fill="#FFFFFF"/>
+        </svg>
+    </div>
+
+    <!-- ================= SECTION 3: WHY CODING ================= -->
+    <section class="relative w-full py-20 md:py-28 bg-white overflow-hidden" id="programs">
+        
+        <div class="absolute top-10 left-10 md:top-20 md:left-32 text-yellow-400 animate-pulse">
+            <svg class="w-10 h-10 md:w-16 md:h-16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="absolute bottom-10 right-10 md:bottom-20 md:right-20 text-yellow-400 animate-bounce" style="animation-duration: 3s;">
+            <svg class="w-8 h-8 md:w-12 md:h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="absolute bottom-20 left-10 md:left-20 text-red-400 animate-spin" style="animation-duration: 10s;">
+            <svg class="w-12 h-12 md:w-20 md:h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-brand-navy leading-tight">
+                    Why Coding Is Important <br class="hidden md:block" /> For Young Generation?
+                </h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                <div class="flex-1 w-full relative">
+                    <div class="relative w-full max-w-md mx-auto">
+                        <svg class="absolute inset-0 w-full h-full text-brand-orange -z-10 transform scale-110 translate-x-4 translate-y-4" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M42.7,-73.4C55.9,-67.1,67.1,-56.1,75.4,-42.9C83.7,-29.7,89.1,-14.8,87.3,-0.9C85.5,12.9,76.5,25.9,66.8,36.7C57.1,47.5,46.6,56.1,34.7,63.4C22.7,70.7,9.3,76.7,-4.8,84.9C-18.9,93,-33.8,103.3,-46.3,98.9C-58.7,94.6,-68.8,75.6,-76.1,57.8C-83.4,40,-87.9,23.5,-85.4,7.8C-82.9,-7.9,-73.4,-22.8,-62.8,-34.9C-52.2,-47,-40.6,-56.3,-27.9,-63C-15.3,-69.7,-1.6,-73.8,13.1,-75.5C27.8,-77.3,42.7,-79.7,42.7,-73.4Z" transform="translate(100 100)" />
+                        </svg>
+                        <div class="relative rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
+                            <img src="/kid3.jpg" alt="Anak belajar coding" class="w-full h-auto object-cover aspect-[4/5] md:aspect-square hover:scale-105 transition-transform duration-500" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-1 w-full">
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4 group">
+                            <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold text-xl transition-transform group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white">✓</div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-black text-brand-navy mb-2 group-hover:text-brand-green transition-colors">From Player to Developer</h3>
+                                <p class="text-gray-500 font-medium leading-relaxed">Ubah kebiasaan main game menjadi skill produktif. Anak tidak hanya mengonsumsi teknologi, tapi menciptakannya.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 group">
+                            <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold text-xl transition-transform group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white">✓</div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-black text-brand-navy mb-2 group-hover:text-brand-green transition-colors">21st Century Skill</h3>
+                                <p class="text-gray-500 font-medium leading-relaxed">Melatih logika berpikir kritis, problem solving, dan kreativitas yang sangat dibutuhkan di masa depan.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 group">
+                            <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold text-xl transition-transform group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white">✓</div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-black text-brand-navy mb-2 group-hover:text-brand-green transition-colors">Every Profession needs IT Skills</h3>
+                                <p class="text-gray-500 font-medium leading-relaxed">Dari dokter hingga desainer, semua profesi kini butuh literasi digital. Bekali anak dengan fondasi yang kuat.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <a href="#trial" class="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navyDark text-white font-bold py-3 px-6 rounded-full transition-all shadow-lg active:scale-95">
+                            Mulai Belajar Sekarang
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= GELOMBANG PEMISAH 3 (Putih ke Oranye) ================= -->
+    <div class="relative w-full h-[80px] md:h-[120px] -mt-24 z-10">
+        <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120 L0 60 C 320 0, 640 100, 960 60 C 1120 40, 1280 80, 1440 60 L1440 120 Z" fill="#FF9B85"/>
+        </svg>
+    </div>
+
+        <!-- ================= SECTION 4: PROGRAM SHOWCASE ================= -->
+    <section class="relative w-full py-16 md:py-24 bg-[#FF9B85] overflow-hidden text-white">        
+        <div class="absolute top-0 left-0 w-full h-16 md:h-24 bg-gradient-to-b from-white/20 to-transparent pointer-events-none z-0"></div>
+        <div class="absolute inset-0 shadow-[0_-20px_50px_rgba(0,0,0,0.1),0_20px_50px_rgba(0,0,0,0.1)] pointer-events-none z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 gap-8">
+                <div class="max-w-2xl">
+                    <span class="text-brand-orange font-black tracking-widest uppercase text-sm mb-3 block">SKILL MASA DEPAN</span>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1]">
+                        Yang anak pelajari <br class="hidden md:block" /> di Rakit AI.
+                    </h2>
+                </div>
+
+                <div class="flex bg-white/10 p-1.5 rounded-xl backdrop-blur-sm overflow-x-auto hide-scrollbar">
+                    <button class="px-6 py-3 rounded-lg bg-brand-orange text-white font-bold text-sm whitespace-nowrap transition-all shadow-md">Semua</button>
+                    <button class="px-6 py-3 rounded-lg text-white/70 hover:text-white hover:bg-white/5 font-bold text-sm whitespace-nowrap transition-all">Coding & AI</button>
+                    <button class="px-6 py-3 rounded-lg text-white/70 hover:text-white hover:bg-white/5 font-bold text-sm whitespace-nowrap transition-all">Robotik</button>
+                </div>
+            </div>
+
+            <!-- GRID 4 KOLOM -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                
+                <!-- Card 1: AI -->
+                <div class="bg-white rounded-3xl overflow-hidden group cursor-pointer transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+                    <div class="h-48 md:h-56 overflow-hidden relative bg-[#E8E2FA] flex items-center justify-center p-4">
+                        <!-- GANTI GAMBAR AI KAMU -->
+                        <img src="/iot.png" alt="Artificial Intelligence" class="w-full h-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div class="p-6 text-brand-navy flex flex-col flex-grow">
+                        <h3 class="text-xl font-black mb-2 group-hover:text-brand-orange transition-colors">Artificial Intelligence (AI)</h3>
+                        <p class="text-sm text-gray-500 font-medium mb-4 line-clamp-3 flex-grow">Membuat mesin bisa berpikir, belajar, dan mengambil keputusan seperti otak manusia.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-bold text-brand-orange mt-auto">
+                            <span>Machine Learning</span> <span class="text-gray-300">•</span>
+                            <span>Neural Net</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Coding -->
+                <div class="bg-white rounded-3xl overflow-hidden group cursor-pointer transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+                    <div class="h-48 md:h-56 overflow-hidden relative bg-gray-100 flex items-center justify-center p-4">
+                        <!-- GANTI GAMBAR CODING KAMU -->
+                        <img src="/coding.png" alt="Coding" class="w-full h-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div class="p-6 text-brand-navy flex flex-col flex-grow">
+                        <h3 class="text-xl font-black mb-2 group-hover:text-brand-orange transition-colors">Coding</h3>
+                        <p class="text-sm text-gray-500 font-medium mb-4 line-clamp-3 flex-grow">Bahasa utama untuk memberi instruksi dan logika kerja pada AI, IoT, dan perangkat Robotik.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-bold text-brand-orange mt-auto">
+                            <span>KodyBlocks</span> <span class="text-gray-300">•</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: IoT -->
+                <div class="bg-white rounded-3xl overflow-hidden group cursor-pointer transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+                    <div class="h-48 md:h-56 overflow-hidden relative bg-[#E8F9F1] flex items-center justify-center p-4">
+                        <!-- GANTI GAMBAR IOT KAMU -->
+                        <img src="/game.png" alt="Internet of Things" class="w-full h-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div class="p-6 text-brand-navy flex flex-col flex-grow">
+                        <h3 class="text-xl font-black mb-2 group-hover:text-brand-orange transition-colors">Internet of Things (IoT)</h3>
+                        <p class="text-sm text-gray-500 font-medium mb-4 line-clamp-3 flex-grow">Menghubungkan semua perangkat fisik di sekitarmu ke internet, agar bisa dikontrol dari mana saja.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-bold text-brand-orange mt-auto">
+                            <span>Smart Home</span> <span class="text-gray-300">•</span>
+                            <span>Sensors</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Robotik -->
+                <div class="bg-white rounded-3xl overflow-hidden group cursor-pointer transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+                    <div class="h-48 md:h-56 overflow-hidden relative bg-[#FFF3E0] flex items-center justify-center p-4">
+                        <!-- GANTI GAMBAR ROBOTIK KAMU -->
+                        <img src="/robotic.png" alt="Internet of Things" class="w-full h-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div class="p-6 text-brand-navy flex flex-col flex-grow">
+                        <h3 class="text-xl font-black mb-2 group-hover:text-brand-orange transition-colors">Robotik</h3>
+                        <p class="text-sm text-gray-500 font-medium mb-4 line-clamp-3 flex-grow">Merancang, merakit, dan menggerakkan perangkat fisik atau robot agar bisa bekerja otomatis.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-bold text-brand-orange mt-auto">
+                            <span>Arduino</span> <span class="text-gray-300">•</span>
+                            <span>Lego Mindstorms</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-16 md:h-24 bg-gradient-to-t from-white/10 to-transparent pointer-events-none z-0"></div>
+    </section>
+
+    <!-- ================= GELOMBANG PEMISAH 4 (Oranye ke Putih) ================= -->
+    <div class="relative w-full h-[80px] md:h-[120px] -mt-24 z-10">
+        <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120 L0 60 C 320 0, 640 100, 960 60 C 1120 40, 1280 80, 1440 60 L1440 120 Z" fill="#FFFFFF"/>
+        </svg>
+    </div>
+
+    <!-- ================= SECTION 5: ONLINE / OFFLINE ================= -->
+    <section class="relative w-full py-20 md:py-28 bg-white overflow-hidden">
+        
+        <div class="absolute top-10 right-10 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-10 left-10 w-72 h-72 bg-blue-100 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                
+                <div class="flex-1 text-center lg:text-left">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-brand-navy leading-[1.15] mb-6">
+                        We Are Available <br class="hidden lg:block" />
+                        For <span class="text-brand-orange">Online / Offline</span> Class!
+                    </h2>
+                    <p class="text-base md:text-lg text-gray-500 font-medium leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
+Ikuti kelas pemrograman kami! Tersedia secara tatap muka di cabang terdekat Anda atau secara daring dengan jadwal fleksibel yang bisa Anda akses kapan saja, di mana saja. Pilih salah satu opsi yang paling sesuai untuk Anda!                    </p>
+                    <a href="#trial" class="inline-flex items-center justify-center bg-brand-orange hover:bg-brand-orangeHover text-white text-sm md:text-base font-black py-4 px-8 rounded-full shadow-lg shadow-orange-500/30 uppercase tracking-wider transition-all active:scale-95">
+                        Book Free Trial
+                    </a>
+                </div>
+
+                <div class="flex-1 w-full relative h-[400px] md:h-[500px]">
+                    
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[65%] md:w-[60%] z-20">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Online Class" class="w-full h-auto rounded-2xl shadow-2xl border-4 border-white object-cover aspect-video" />
+                    </div>
+
+                    <div class="absolute top-0 left-0 w-[35%] z-10 animate-float">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Siswa" class="w-full h-auto rounded-xl shadow-lg border-4 border-white object-cover aspect-square" />
+                    </div>
+
+                    <div class="absolute bottom-4 right-0 w-[45%] z-30 animate-float" style="animation-delay: 1s;">
+                        <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Offline Class" class="w-full h-auto rounded-xl shadow-xl border-4 border-white object-cover aspect-[4/3]" />
+                    </div>
+
+                    <div class="absolute bottom-0 left-4 md:left-12 w-[30%] z-30 animate-float" style="animation-delay: 2s;">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Happy Kid" class="w-full h-auto rounded-xl shadow-lg border-4 border-white object-cover aspect-[3/4]" />
+                    </div>
+
+                    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 z-10 bg-white p-3 rounded-full shadow-lg text-brand-orange animate-bounce">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <div class="absolute bottom-1/4 left-1/4 z-10 bg-brand-orange p-2.5 rounded-full shadow-lg text-white animate-spin" style="animation-duration: 10s;">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
+                    </div>
+                    <div class="absolute top-10 right-10 z-0 bg-blue-400 p-4 rounded-full opacity-50 blur-sm"></div>
+                    <div class="absolute bottom-16 right-16 z-0 bg-yellow-400 p-6 rounded-full opacity-60 blur-md"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        {{-- <!-- ================= SECTION 6: STUDENT PROJECT PORTFOLIO ================= --> --}}
+        <!-- ================= SECTION 6: STUDENT PROJECT PORTFOLIO (Clean & Static) ================= -->
+    <section class="relative w-full py-20 md:py-28 bg-brand-bgLight overflow-hidden">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Judul -->
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-brand-navy tracking-tight">
+                    Student Project Portfolio
+                </h2>
+            </div>
+
+            <!-- Container Slider & Tombol -->
+            <div class="relative">
+                
+                <!-- Tombol Panah Kiri -->
+                <button class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-6 z-20 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-brand-orange hover:bg-brand-orangeHover text-white rounded-full shadow-xl transition-transform active:scale-90">
+                    <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+
+                <!-- GRID CARDS -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 px-4 md:px-0">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-[32px] overflow-visible shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex flex-col relative pt-0 mt-12 border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="h-40 w-full rounded-t-[32px] overflow-hidden bg-[#E8F4FF]">
+                            <!-- GANTI GAMBAR PROYEK DARI UNSPLASH -->
+                            <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Proyek 1" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="absolute top-28 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full border-4 border-white bg-brand-orange overflow-hidden shadow-md">
+                            <!-- GANTI FOTO SISWA DARI UNSPLASH -->
+                            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Siswa 1" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="pt-12 pb-6 px-6 text-center flex flex-col items-center flex-grow">
+                            <span class="inline-block bg-[#FFC727] text-brand-navy font-bold text-xs md:text-sm px-5 py-1.5 rounded-md mb-4 shadow-sm">Mobile App</span>
+                            <h3 class="text-lg md:text-xl font-black text-brand-navy mb-2 uppercase tracking-wide">CLICKER GAME</h3>
+                            <p class="text-xs md:text-sm text-gray-500 font-medium mt-auto">Ni Komang Amelia<br>Kartadi (10)</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-[32px] overflow-visible shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex flex-col relative pt-0 mt-12 border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="h-40 w-full rounded-t-[32px] overflow-hidden bg-[#FFF3E0]">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Proyek 2" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="absolute top-28 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full border-4 border-white bg-blue-400 overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Siswa 2" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="pt-12 pb-6 px-6 text-center flex flex-col items-center flex-grow">
+                            <span class="inline-block bg-[#8ED8FF] text-brand-navy font-bold text-xs md:text-sm px-5 py-1.5 rounded-md mb-4 shadow-sm">Mobile Game</span>
+                            <h3 class="text-lg md:text-xl font-black text-brand-navy mb-2 uppercase tracking-wide">A CARP LIFE</h3>
+                            <p class="text-xs md:text-sm text-gray-500 font-medium mt-auto">Bima Sakti Habibie (11)</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-[32px] overflow-visible shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex flex-col relative pt-0 mt-12 border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="h-40 w-full rounded-t-[32px] overflow-hidden bg-[#E8F9F1]">
+                            <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Proyek 3" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="absolute top-28 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full border-4 border-white bg-purple-400 overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Siswa 3" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="pt-12 pb-6 px-6 text-center flex flex-col items-center flex-grow">
+                            <span class="inline-block bg-[#FFB4A2] text-brand-navy font-bold text-xs md:text-sm px-5 py-1.5 rounded-md mb-4 shadow-sm">Desktop Game</span>
+                            <h3 class="text-lg md:text-xl font-black text-brand-navy mb-2 uppercase tracking-wide">SUPER RUNNNS</h3>
+                            <p class="text-xs md:text-sm text-gray-500 font-medium mt-auto">Sherlyn Julita Davila (12)</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-[32px] overflow-visible shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex flex-col relative pt-0 mt-12 border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="h-40 w-full rounded-t-[32px] overflow-hidden bg-[#F3E8FF]">
+                            <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Proyek 4" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="absolute top-28 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full border-4 border-white bg-pink-400 overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Siswa 4" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="pt-12 pb-6 px-6 text-center flex flex-col items-center flex-grow">
+                            <span class="inline-block bg-[#A8E8CE] text-brand-navy font-bold text-xs md:text-sm px-5 py-1.5 rounded-md mb-4 shadow-sm">Mobile Game</span>
+                            <h3 class="text-lg md:text-xl font-black text-brand-navy mb-2 uppercase tracking-wide">LEO CATCHIN' COINZ</h3>
+                            <p class="text-xs md:text-sm text-gray-500 font-medium mt-auto">Hasna Nuril Hadi (10)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Tombol Panah Kanan -->
+                <button class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-6 z-20 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-brand-orange hover:bg-brand-orangeHover text-white rounded-full shadow-xl transition-transform active:scale-90">
+                    <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+        <!-- ================= SECTION 7: FINAL CTA & FOOTER (RakitAI.id Style) ================= -->
+    <section class="relative w-full bg-brand-orange pt-20 pb-10 overflow-hidden text-white">
+        
+        <!-- Dekorasi Background (Opsional: bisa diganti bentuk gelombang atau pattern) -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 100 C 30 80, 50 30, 100 0 L100 100 Z" fill="#FFFFFF"/>
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <!-- Judul Besar -->
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+                Siap Belajar Teknologi <br class="hidden md:block" />
+                Tanpa Harus Bingung
+            </h2>
+
+            <!-- Deskripsi -->
+            <p class="text-base md:text-lg text-white/90 font-medium leading-relaxed mb-10 max-w-2xl mx-auto">
+                Gabung sekarang dan mulai langkah pertamamu bareng mentor profesional, komunitas suportif, dan support system yang selalu siap bantu kamu berkembang.
+            </p>
+
+            <!-- FORM INPUT EMAIL + TOMBOL -->
+            <!-- Dibuat rounded-full dan menempel jadi satu kesatuan -->
+            <form class="flex flex-col sm:flex-row items-center justify-center w-full max-w-2xl mx-auto mb-16" onsubmit="event.preventDefault(); alert('Terima kasih! Cek email kamu untuk informasi selanjutnya.');">
+                <div class="relative w-full">
+                    <input 
+                        type="email" 
+                        placeholder="Masukan Email..." 
+                        required
+                        class="w-full pl-6 pr-4 sm:pr-48 py-4 rounded-full sm:rounded-r-none sm:rounded-l-full text-brand-navy font-medium focus:outline-none focus:ring-4 focus:ring-white/30 border-none shadow-lg"
+                    />
+                    <!-- Tombol ditaruh di dalam input (desktop), dan di bawah (mobile) -->
+                    <button 
+                        type="submit" 
+                        class="w-full sm:w-auto sm:absolute sm:right-1 sm:top-1 sm:bottom-1 px-8 py-4 sm:py-0 mt-3 sm:mt-0 bg-[#D63E29] hover:bg-[#C43522] text-white font-bold rounded-full transition-all shadow-md active:scale-95 flex items-center justify-center"
+                    >
+                        Ambil Kelas Gratis
+                    </button>
+                </div>
+            </form>
+
+            <!-- Copyright -->
+            <p class="text-sm text-white/80 font-medium mb-8">
+                Copyright © 2025. PT Pintar Kapan Aja (PIKA)
+            </p>
+
+            <!-- Footer Links Kecil -->
+            <div class="flex flex-wrap justify-center gap-6 text-sm font-bold text-white/90 mb-8">
+                <a href="#" class="hover:text-white hover:underline transition-all">Instagram</a>
+                <a href="#" class="hover:text-white hover:underline transition-all">YouTube</a>
+                <a href="#" class="hover:text-white hover:underline transition-all">LinkedIn</a>
+                <a href="#" class="hover:text-white hover:underline transition-all">Kebijakan Privasi</a>
+                <a href="#" class="hover:text-white hover:underline transition-all">Syarat & Ketentuan</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= GELOMBANG PEMISAH 5 (Putih/Abu ke Putih Footer) ================= -->
+    <!-- Opsional: Kalau mau tetap pakai gelombang sebelum footer -->
+    <!-- <div class="relative w-full h-[80px] md:h-[120px] -mt-10 z-10 bg-brand-bgLight">
+        <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120 L0 60 C 320 0, 640 100, 960 60 C 1120 40, 1280 80, 1440 60 L1440 120 Z" fill="#FFFFFF"/>
+        </svg>
+    </div> -->
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="max-w-7xl mx-auto mt-20 pt-10 pb-10 px-4 sm:px-6 lg:px-8 border-t border-gray-200 text-center">
+        <img alt="Rakit AI Logo" class="h-10 w-auto object-contain mx-auto mb-4" src="/logo.png"/>
+        <p class="text-sm text-gray-500 leading-relaxed mb-6 max-w-md mx-auto">Empowering next-generation digital creators, problem solvers & leaders with coding and AI education.</p>
+        <div class="flex justify-center gap-6 text-sm text-gray-400 font-semibold mb-6">
+            <a class="hover:text-brand-orange transition-colors" href="#">Instagram</a>
+            <a class="hover:text-brand-orange transition-colors" href="#">YouTube</a>
+            <a class="hover:text-brand-orange transition-colors" href="#">LinkedIn</a>
+        </div>
+        <p class="text-xs text-gray-400">© 2024 PT Rakit AI Indonesia. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ================= FLOATING WHATSAPP ================= -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a aria-label="Chat WhatsApp" class="flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full shadow-lg shadow-green-500/40 transition-transform active:scale-90" href="https://wa.me/" target="_blank">
+            <svg class="w-7 h-7 fill-current" viewbox="0 0 24 24"><path d="M12.031 2C6.495 2 2 6.495 2 12.031a9.98 9.98 0 0 0 1.554 5.342L2 22l4.78-1.517a9.99 9.99 0 0 0 5.251 1.488c5.536 0 10.031-4.495 10.031-10.031S17.567 2 12.031 2zm0 18.232a8.21 8.21 0 0 1-4.223-1.163l-.303-.18-3.136.996.999-3.058-.198-.315a8.2 8.2 0 1 1 6.861 3.72zm4.55-6.177c-.25-.125-1.477-.729-1.706-.813-.229-.083-.396-.125-.563.125-.167.25-.646.813-.792.98-.146.166-.292.187-.542.062s-1.054-.388-2.008-1.238c-.742-.662-1.243-1.48-1.389-1.73-.146-.25-.016-.385.109-.51.112-.112.25-.292.375-.438s.167-.25.25-.417a.52.52 0 0 0-.021-.5c-.062-.125-.562-1.354-.77-1.854-.203-.487-.41-.421-.563-.429l-.479-.008c-.167 0-.438.062-.667.312s-.875.854-.875 2.083c0 1.229.896 2.417 1.021 2.583.125.167 1.763 2.693 4.271 3.777.597.258 1.064.412 1.428.528.6.191 1.146.164 1.578.099.481-.072 1.477-.604 1.685-1.188.208-.583.208-1.083.146-1.188-.063-.104-.229-.167-.479-.292z"></path></svg>
+            <span class="absolute top-0 right-0 w-3.5 h-3.5 bg-red-500 border-2 border-white rounded-full"></span>
+        </a>
+    </div>
+
+</body>
+</html>
