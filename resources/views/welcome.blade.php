@@ -63,8 +63,9 @@
             
             <nav class="hidden md:flex items-center gap-8 text-sm font-bold text-gray-600">
                 <a href="#programs" class="hover:text-brand-orange transition-colors">Program</a>
-                <a href="#method" class="hover:text-brand-orange transition-colors">Metode</a>
+                <a href="#pricing" class="hover:text-brand-orange transition-colors">Paket & Biaya</a>
                 <a href="#testimonials" class="hover:text-brand-orange transition-colors">Testimoni</a>
+                <a href="#faq" class="hover:text-brand-orange transition-colors">FAQ</a>
             </nav>
 
             <div class="flex items-center gap-3">
@@ -544,8 +545,550 @@ Ikuti kelas pemrograman kami! Tersedia secara tatap muka di cabang terdekat Anda
         </div>
     </section>
 
-        <!-- ================= SECTION 7: FINAL CTA & FOOTER (RakitAI.id Style) ================= -->
-    <section class="relative w-full bg-brand-orange pt-20 pb-10 overflow-hidden text-white">
+    <!-- ================= SECTION 7: PRICING (Pilihan Paket & Harga Kelas) ================= -->
+    <section class="relative w-full py-20 md:py-28 bg-white overflow-hidden" id="pricing">
+        <!-- Dekorasi Background -->
+        <div class="absolute top-10 left-10 w-72 h-72 bg-brand-orange/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header Section -->
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                <span class="text-[11px] sm:text-xs font-black uppercase tracking-widest text-brand-orange bg-orange-50 border border-orange-100 px-4 py-1.5 rounded-full inline-block mb-3">
+                    PILIHAN PAKET & HARGA KELAS
+                </span>
+                <h2 class="text-3xl md:text-5xl font-black text-brand-navy leading-tight tracking-tight">
+                    Investasi Terbaik untuk <span class="text-brand-orange">Masa Depan Digital</span> Anak
+                </h2>
+                <p class="text-sm md:text-base text-gray-500 font-medium mt-3 leading-relaxed">
+                    Kurikulum terstruktur standar internasional dengan bimbingan mentor ramah dan berdedikasi. Pilih program yang paling pas untuk tahapan usia ananda.
+                </p>
+
+                <!-- Billing Switcher (Bulanan vs Term 3 Bulan) -->
+                <div class="mt-8 inline-flex items-center p-1.5 bg-gray-100 rounded-full border border-gray-200 shadow-inner">
+                    <button type="button" id="billing-monthly-btn" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-extrabold transition-all duration-300 bg-white text-brand-navy shadow-sm">
+                        Bulanan (Reguler)
+                    </button>
+                    <button type="button" id="billing-term-btn" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-extrabold transition-all duration-300 text-gray-500 hover:text-brand-navy flex items-center gap-1.5">
+                        <span>Paket Term (3 Bulan)</span>
+                        <span class="bg-brand-orange text-white text-[10px] font-black px-2 py-0.5 rounded-full">Hemat 15%</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch pt-4">
+                
+                <!-- CARD 1: Junior Coder -->
+                <div class="bg-white rounded-[32px] p-8 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between relative">
+                    <div>
+                        <!-- Header Card -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-flex items-center gap-1.5 bg-[#E8F4FF] text-[#2B7FFF] font-extrabold text-xs px-3.5 py-1.5 rounded-full">
+                                <span>🚀</span> Tingkat Pemula
+                            </span>
+                            <span class="text-xs font-bold text-gray-400">Usia 6 - 9 Tahun</span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-black text-brand-navy mb-2">Junior Coder</h3>
+                        <p class="text-xs sm:text-sm text-gray-500 font-medium mb-6 leading-relaxed">
+                            Membangun fondasi logika berpikir komputasional melalui visual block coding, puzzle interaktif, dan animasi yang seru.
+                        </p>
+
+                        <!-- Price -->
+                        <div class="bg-[#F8FAFC] rounded-2xl p-5 mb-6 border border-gray-100">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-xs font-bold text-gray-400">Rp</span>
+                                <span class="text-3xl sm:text-4xl font-black text-brand-navy pricing-junior">349.000</span>
+                                <span class="text-xs sm:text-sm font-semibold text-gray-400 pricing-period">/bulan</span>
+                            </div>
+                            <p class="text-[11px] font-bold text-brand-orange mt-1.5 pricing-junior-note">
+                                Biaya investasi reguler bulanan (4 sesi)
+                            </p>
+                        </div>
+
+                        <!-- Benefits List -->
+                        <div class="space-y-3.5 mb-8">
+                            <p class="text-xs font-extrabold uppercase tracking-wider text-brand-navy">Benefit & Fasilitas Paket:</p>
+                            
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium"><strong>4x Pertemuan</strong> per bulan (1x/minggu @60 Menit)</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Materi: <strong>Scratch Jr & KodyBlocks</strong> animasi</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Kelas kecil (Maks. 3-4 anak / privat 1-on-1)</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Pengasahan <strong>Computational Thinking</strong> & kreativitas</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Pembuatan <strong>2 Proyek Game</strong> buatan mandiri</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Laporan perkembangan berkala untuk orang tua</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">E-Sertifikat kelulusan level resmi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <a href="https://wa.me/?text=Halo%20Rakit%20AI,%20saya%20tertarik%20dengan%20Paket%20Junior%20Coder" target="_blank" class="w-full py-4 px-6 rounded-full border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-black text-xs sm:text-sm transition-all duration-300 text-center block shadow-sm hover:shadow-md active:scale-95">
+                        Pilih Paket Junior Coder
+                    </a>
+                </div>
+
+                <!-- CARD 2: Young AI Developer (HIGHLIGHTED / POPULAR) -->
+                <div class="bg-white rounded-[32px] p-8 border-2 border-brand-orange shadow-[0_20px_50px_rgba(232,78,56,0.18)] hover:shadow-2xl transition-all duration-300 lg:-translate-y-4 flex flex-col justify-between relative z-20">
+                    <!-- Floating Badge -->
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-orange to-[#D63E29] text-white font-black text-[11px] tracking-wider uppercase px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+                        <span>⭐</span> PALING DIMINATI ORANG TUA
+                    </div>
+
+                    <div>
+                        <!-- Header Card -->
+                        <div class="flex items-center justify-between mb-4 pt-1">
+                            <span class="inline-flex items-center gap-1.5 bg-[#FFF0ED] text-brand-orange font-extrabold text-xs px-3.5 py-1.5 rounded-full">
+                                <span>🤖</span> Tingkat Menengah
+                            </span>
+                            <span class="text-xs font-bold text-gray-400">Usia 10 - 13 Tahun</span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-black text-brand-navy mb-2 flex items-center gap-2">
+                            Young AI Developer
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-500 font-medium mb-6 leading-relaxed">
+                            Menciptakan game 3D, memahami logika Machine Learning, prompting AI anak, dan perancangan aplikasi interaktif.
+                        </p>
+
+                        <!-- Price -->
+                        <div class="bg-orange-50/70 rounded-2xl p-5 mb-6 border border-orange-100">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-xs font-bold text-brand-orange">Rp</span>
+                                <span class="text-3xl sm:text-4xl font-black text-brand-orange pricing-ai">499.000</span>
+                                <span class="text-xs sm:text-sm font-semibold text-gray-500 pricing-period">/bulan</span>
+                            </div>
+                            <p class="text-[11px] font-bold text-brand-orange mt-1.5 pricing-ai-note">
+                                Pilihan favorit 65% orang tua siswa Rakit AI
+                            </p>
+                        </div>
+
+                        <!-- Benefits List -->
+                        <div class="space-y-3.5 mb-8">
+                            <p class="text-xs font-extrabold uppercase tracking-wider text-brand-navy">Semua Benefit Junior, Ditambah:</p>
+                            
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-700 font-medium"><strong>4x Pertemuan</strong> per bulan (1x/minggu @90 Menit)</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-700 font-medium">Materi: <strong>Roblox Studio, Game 3D & AI Prompting</strong></span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-700 font-medium">Eksplorasi konsep <strong>Machine Learning for Kids</strong></span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-700 font-medium">Membangun <strong>3 Proyek Game Portofolio</strong> riil</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-700 font-medium">Sesi <strong>Showcase Day</strong> karya di depan orang tua</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-700 font-medium">Mentoring suportif & akses komunitas kreatif Rakit AI</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-700 font-medium">E-Sertifikat kompetensi terakreditasi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <a href="https://wa.me/?text=Halo%20Rakit%20AI,%20saya%20tertarik%20dengan%20Paket%20Young%20AI%20Developer" target="_blank" class="w-full py-4 px-6 rounded-full bg-brand-orange hover:bg-brand-orangeHover text-white font-black text-xs sm:text-sm transition-all duration-300 text-center block shadow-lg shadow-orange-500/30 active:scale-95">
+                        Daftar Paket Populer Ini
+                    </a>
+                </div>
+
+                <!-- CARD 3: Teen Innovator -->
+                <div class="bg-white rounded-[32px] p-8 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between relative">
+                    <div>
+                        <!-- Header Card -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-flex items-center gap-1.5 bg-[#F3E8FF] text-[#8B5CF6] font-extrabold text-xs px-3.5 py-1.5 rounded-full">
+                                <span>⚡</span> Tingkat Lanjut
+                            </span>
+                            <span class="text-xs font-bold text-gray-400">Usia 14 - 17 Tahun</span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-black text-brand-navy mb-2">Teen Innovator</h3>
+                        <p class="text-xs sm:text-sm text-gray-500 font-medium mb-6 leading-relaxed">
+                            Mempelajari coding profesional dengan Python, web application, algoritma data, hingga penerapan solusi kecerdasan buatan.
+                        </p>
+
+                        <!-- Price -->
+                        <div class="bg-[#F8FAFC] rounded-2xl p-5 mb-6 border border-gray-100">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-xs font-bold text-gray-400">Rp</span>
+                                <span class="text-3xl sm:text-4xl font-black text-brand-navy pricing-teen">699.000</span>
+                                <span class="text-xs sm:text-sm font-semibold text-gray-400 pricing-period">/bulan</span>
+                            </div>
+                            <p class="text-[11px] font-bold text-brand-orange mt-1.5 pricing-teen-note">
+                                Persiapan portofolio & karir masa depan (4 sesi)
+                            </p>
+                        </div>
+
+                        <!-- Benefits List -->
+                        <div class="space-y-3.5 mb-8">
+                            <p class="text-xs font-extrabold uppercase tracking-wider text-brand-navy">Benefit & Fasilitas Paket:</p>
+                            
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium"><strong>4x Pertemuan</strong> per bulan (1x/minggu @90 Menit)</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Materi: <strong>Python Pro, Web App & Applied AI</strong></span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Bimbingan proyek portofolio <strong>GitHub & Lomba Sains</strong></span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Mentoring 1-on-1 dengan praktisi industri tech</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Persiapan beasiswa & seleksi jurusan teknologi</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Akses eksklusif Rakit AI Hackathon & Innovation Lab</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Surat rekomendasi mentor & sertifikat tingkat lanjut</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <a href="https://wa.me/?text=Halo%20Rakit%20AI,%20saya%20tertarik%20dengan%20Paket%20Teen%20Innovator" target="_blank" class="w-full py-4 px-6 rounded-full border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-black text-xs sm:text-sm transition-all duration-300 text-center block shadow-sm hover:shadow-md active:scale-95">
+                        Pilih Paket Teen Innovator
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Guarantee Banner -->
+            <div class="mt-12 max-w-4xl mx-auto bg-[#F8FAFC] border border-gray-200/80 rounded-2xl md:rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+                <div class="w-14 h-14 rounded-2xl bg-orange-100 text-brand-orange flex items-center justify-center text-2xl flex-shrink-0 shadow-inner">
+                    🛡️
+                </div>
+                <div class="flex-grow">
+                    <h4 class="font-black text-brand-navy text-base md:text-lg mb-1">100% Garansi Kepuasan Belajar</h4>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium leading-relaxed">
+                        Jika setelah 2 sesi pertama ananda merasa metode belajar kurang cocok, kami berikan jaminan pengembalian dana penuh tanpa syarat rumit.
+                    </p>
+                </div>
+                <a href="#trial" class="flex-shrink-0 bg-brand-navy hover:bg-brand-navyDark text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full transition-all shadow-md active:scale-95">
+                    Coba Free Trial Dulu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 8: TESTIMONIALS (Ulasan Orang Tua Siswa) ================= -->
+    <section class="relative w-full py-20 md:py-28 bg-brand-bgLight overflow-hidden" id="testimonials">
+        <!-- Dekorasi Background -->
+        <div class="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-brand-orange/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+        <div class="absolute top-10 right-10 w-72 h-72 bg-emerald-50 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header Section -->
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                <span class="text-[11px] sm:text-xs font-black uppercase tracking-widest text-brand-orange bg-orange-50 border border-orange-100 px-4 py-1.5 rounded-full inline-block mb-3">
+                    ULASAN & CERITA ORANG TUA
+                </span>
+                <h2 class="text-3xl md:text-5xl font-black text-brand-navy leading-tight tracking-tight">
+                    Dipercaya Lebih dari <span class="text-brand-orange">1.500+ Orang Tua</span> di Indonesia
+                </h2>
+                <p class="text-sm md:text-base text-gray-500 font-medium mt-3 leading-relaxed">
+                    Kisah nyata bagaimana anak-anak bertransformasi dari sekadar konsumen game menjadi kreator digital yang penuh rasa ingin tahu dan percaya diri.
+                </p>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-14 max-w-5xl mx-auto">
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-card text-center">
+                    <div class="text-2xl sm:text-3xl font-black text-brand-orange">4.9 / 5.0</div>
+                    <div class="text-xs font-bold text-gray-500 mt-1">⭐ Skor Kepuasan Wali Murid</div>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-card text-center">
+                    <div class="text-2xl sm:text-3xl font-black text-brand-navy">1.500+</div>
+                    <div class="text-xs font-bold text-gray-500 mt-1">🚀 Siswa Telah Belajar</div>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-card text-center">
+                    <div class="text-2xl sm:text-3xl font-black text-brand-navy">98%</div>
+                    <div class="text-xs font-bold text-gray-500 mt-1">🏆 Tuntaskan Proyek Pertama</div>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-card text-center">
+                    <div class="text-2xl sm:text-3xl font-black text-brand-navy">100%</div>
+                    <div class="text-xs font-bold text-gray-500 mt-1">👩‍🏫 Mentor Tersertifikasi</div>
+                </div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Testi Card 1 -->
+                <div class="bg-white rounded-[32px] p-8 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between relative group">
+                    <div class="mb-6">
+                        <!-- Rating Stars & Quote Icon -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-amber-400 gap-1 text-sm">
+                                ★★★★★
+                            </div>
+                            <span class="text-brand-orange/30 group-hover:text-brand-orange transition-colors">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Quote Text -->
+                        <p class="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed italic">
+                            "Arka (8 thn) dulu kecanduan main game di tablet sampai susah disuruh belajar. Setelah ikut kelas Junior Coder di Rakit AI, waktu gadget-nya berubah 180 derajat jadi produktif! Dia sangat senang bisa bikin animasi dan game labirin sendiri, bahkan dengan bangga dipamerkan ke keluarga saat kumpul lebaran. Terima kasih Rakit AI!"
+                        </p>
+                    </div>
+
+                    <!-- Parent Profile -->
+                    <div class="pt-5 border-t border-gray-100 flex items-center gap-3.5">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Ibu Ratna Kumalasari" class="w-12 h-12 rounded-full object-cover border-2 border-brand-orange flex-shrink-0" />
+                        <div>
+                            <div class="flex items-center gap-1.5">
+                                <h4 class="font-black text-brand-navy text-sm">Ibu Ratna Kumalasari</h4>
+                                <span class="text-brand-green text-xs" title="Verified Parent">✓</span>
+                            </div>
+                            <p class="text-[11px] text-gray-400 font-medium">Bunda dari Arka (8 thn, Kelas 3 SD)</p>
+                            <span class="inline-block bg-[#E8F4FF] text-[#2B7FFF] text-[10px] font-extrabold px-2 py-0.5 rounded-md mt-1">Paket Junior Coder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi Card 2 -->
+                <div class="bg-white rounded-[32px] p-8 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between relative group">
+                    <div class="mb-6">
+                        <!-- Rating Stars & Quote Icon -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-amber-400 gap-1 text-sm">
+                                ★★★★★
+                            </div>
+                            <span class="text-brand-orange/30 group-hover:text-brand-orange transition-colors">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Quote Text -->
+                        <p class="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed italic">
+                            "Awalnya ragu apakah anak perempuan saya akan tertarik dengan coding. Ternyata penyampaian mentornya super seru, sabar, dan penuh apresiasi. Nadira belajar logika Roblox dan konsep AI dasar tanpa rasa jenuh. Nilai matematikanya di sekolah ikut melonjak karena terbiasa berpikir runut dan analitis."
+                        </p>
+                    </div>
+
+                    <!-- Parent Profile -->
+                    <div class="pt-5 border-t border-gray-100 flex items-center gap-3.5">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Bapak Hendra Wijaya" class="w-12 h-12 rounded-full object-cover border-2 border-brand-orange flex-shrink-0" />
+                        <div>
+                            <div class="flex items-center gap-1.5">
+                                <h4 class="font-black text-brand-navy text-sm">Bapak Hendra Wijaya</h4>
+                                <span class="text-brand-green text-xs" title="Verified Parent">✓</span>
+                            </div>
+                            <p class="text-[11px] text-gray-400 font-medium">Ayah dari Nadira (11 thn, Kelas 6 SD)</p>
+                            <span class="inline-block bg-[#FFF0ED] text-brand-orange text-[10px] font-extrabold px-2 py-0.5 rounded-md mt-1">Paket Young AI Developer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi Card 3 -->
+                <div class="bg-white rounded-[32px] p-8 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between relative group">
+                    <div class="mb-6">
+                        <!-- Rating Stars & Quote Icon -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-amber-400 gap-1 text-sm">
+                                ★★★★★
+                            </div>
+                            <span class="text-brand-orange/30 group-hover:text-brand-orange transition-colors">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Quote Text -->
+                        <p class="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed italic">
+                            "Program Teen Innovator beneran membuka pintu masa depan anak saya. Farel diajarkan Python dan logika AI sungguhan oleh mentor industri. Bulan lalu dia berhasil memenangkan lomba sains teknologi remaja di sekolahnya berkat proyek otomasi buatannya di Rakit AI. Investasi terbaik untuk masa depan anak!"
+                        </p>
+                    </div>
+
+                    <!-- Parent Profile -->
+                    <div class="pt-5 border-t border-gray-100 flex items-center gap-3.5">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Ibu Maya Kartika" class="w-12 h-12 rounded-full object-cover border-2 border-brand-orange flex-shrink-0" />
+                        <div>
+                            <div class="flex items-center gap-1.5">
+                                <h4 class="font-black text-brand-navy text-sm">Ibu Maya Kartika, M.Pd</h4>
+                                <span class="text-brand-green text-xs" title="Verified Parent">✓</span>
+                            </div>
+                            <p class="text-[11px] text-gray-400 font-medium">Bunda dari Farel (14 thn, Kelas 2 SMP)</p>
+                            <span class="inline-block bg-[#F3E8FF] text-[#8B5CF6] text-[10px] font-extrabold px-2 py-0.5 rounded-md mt-1">Paket Teen Innovator</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 9: FAQ (Frequently Asked Questions) ================= -->
+    <section class="relative w-full py-20 md:py-28 bg-white overflow-hidden" id="faq">
+        <!-- Dekorasi Background -->
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-orange-50/60 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header Section -->
+            <div class="text-center mb-12 md:mb-16">
+                <span class="text-[11px] sm:text-xs font-black uppercase tracking-widest text-brand-orange bg-orange-50 border border-orange-100 px-4 py-1.5 rounded-full inline-block mb-3">
+                    FREQUENTLY ASKED QUESTIONS
+                </span>
+                <h2 class="text-3xl md:text-5xl font-black text-brand-navy leading-tight tracking-tight">
+                    Pertanyaan yang Sering <span class="text-brand-orange">Ditanyakan</span>
+                </h2>
+                <p class="text-sm md:text-base text-gray-500 font-medium mt-3 max-w-xl mx-auto leading-relaxed">
+                    Semua jawaban seputar kurikulum, jadwal, perangkat, dan metode belajar di Rakit AI untuk memudahkan Ayah & Bunda.
+                </p>
+            </div>
+
+            <!-- Accordion List -->
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-[#FCFDFE] rounded-2xl md:rounded-3xl border border-gray-200/80 hover:border-orange-200 transition-all duration-200 overflow-hidden shadow-sm">
+                    <button type="button" class="faq-btn w-full px-6 py-5 md:py-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer">
+                        <span class="text-sm md:text-base font-bold text-brand-navy">
+                            Apakah anak yang belum pernah belajar coding sama sekali bisa ikut?
+                        </span>
+                        <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-orange-50 text-brand-orange flex items-center justify-center transition-all duration-300">
+                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-500 font-medium leading-relaxed border-t border-gray-100 pt-4">
+                        Tentu saja bisa! Lebih dari 90% siswa baru kami memulai dari nol tanpa pengalaman koding sama sekali. Kami menggunakan kurikulum berjenjang dengan pendekatan visual (visual block programming) dan metode pembelajaran berbasis game yang interaktif, sehingga anak belajar dengan rasa senang layaknya merakit puzzle tanpa merasa terbebani.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-[#FCFDFE] rounded-2xl md:rounded-3xl border border-gray-200/80 hover:border-orange-200 transition-all duration-200 overflow-hidden shadow-sm">
+                    <button type="button" class="faq-btn w-full px-6 py-5 md:py-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer">
+                        <span class="text-sm md:text-base font-bold text-brand-navy">
+                            Perangkat apa saja yang dibutuhkan untuk mengikuti kelas?
+                        </span>
+                        <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-orange-50 text-brand-orange flex items-center justify-center transition-all duration-300">
+                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-500 font-medium leading-relaxed border-t border-gray-100 pt-4">
+                        Cukup sediakan laptop atau komputer (PC) berbasis Windows atau macOS dengan koneksi internet yang stabil, webcam, mikrofon, dan browser Google Chrome ter-update. Untuk level dasar (Junior Coder), spesifikasi laptop standar sekolah/pekerjaan sudah sangat mencukupi tanpa memerlukan laptop gaming spesifikasi tinggi.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-[#FCFDFE] rounded-2xl md:rounded-3xl border border-gray-200/80 hover:border-orange-200 transition-all duration-200 overflow-hidden shadow-sm">
+                    <button type="button" class="faq-btn w-full px-6 py-5 md:py-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer">
+                        <span class="text-sm md:text-base font-bold text-brand-navy">
+                            Apakah kelas diadakan secara online atau tatap muka (offline)?
+                        </span>
+                        <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-orange-50 text-brand-orange flex items-center justify-center transition-all duration-300">
+                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-500 font-medium leading-relaxed border-t border-gray-100 pt-4">
+                        Kami menyediakan kedua opsi fleksibel! Ayah & Bunda bisa memilih kelas online tatap layar secara live interaktif via Zoom dari rumah, atau kelas tatap muka langsung (offline) di cabang center Rakit AI terdekat di kota Anda dengan fasilitas lab komputer modern.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-[#FCFDFE] rounded-2xl md:rounded-3xl border border-gray-200/80 hover:border-orange-200 transition-all duration-200 overflow-hidden shadow-sm">
+                    <button type="button" class="faq-btn w-full px-6 py-5 md:py-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer">
+                        <span class="text-sm md:text-base font-bold text-brand-navy">
+                            Berapa jumlah siswa dalam setiap sesi kelas?
+                        </span>
+                        <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-orange-50 text-brand-orange flex items-center justify-center transition-all duration-300">
+                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-500 font-medium leading-relaxed border-t border-gray-100 pt-4">
+                        Untuk menjaga kualitas interaksi maksimal, kelas reguler kami batasi maksimal hanya 3 hingga 4 anak per kelompok. Kami juga menyediakan opsi kelas Privat 1-on-1 (1 mentor 1 anak) bagi yang menginginkan fleksibilitas jadwal dan bimbingan yang 100% dipersonalisasi sesuai kecepatan belajar ananda.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-[#FCFDFE] rounded-2xl md:rounded-3xl border border-gray-200/80 hover:border-orange-200 transition-all duration-200 overflow-hidden shadow-sm">
+                    <button type="button" class="faq-btn w-full px-6 py-5 md:py-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer">
+                        <span class="text-sm md:text-base font-bold text-brand-navy">
+                            Bagaimana jika anak berhalangan hadir pada jadwal kelas (reschedule)?
+                        </span>
+                        <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-orange-50 text-brand-orange flex items-center justify-center transition-all duration-300">
+                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-500 font-medium leading-relaxed border-t border-gray-100 pt-4">
+                        Kami sangat memahami kesibukan sekolah anak. Orang tua cukup mengonfirmasi izin ketidakhadiran minimal 12 jam sebelum sesi dimulai, dan tim kami akan mengatur jadwal sesi pengganti (Make-up Class) tanpa ada biaya tambahan sama sekali, sehingga anak tidak akan kehilangan materi.
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="bg-[#FCFDFE] rounded-2xl md:rounded-3xl border border-gray-200/80 hover:border-orange-200 transition-all duration-200 overflow-hidden shadow-sm">
+                    <button type="button" class="faq-btn w-full px-6 py-5 md:py-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer">
+                        <span class="text-sm md:text-base font-bold text-brand-navy">
+                            Apakah ada sesi coba gratis (Free Trial) sebelum mendaftar?
+                        </span>
+                        <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-orange-50 text-brand-orange flex items-center justify-center transition-all duration-300">
+                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-500 font-medium leading-relaxed border-t border-gray-100 pt-4">
+                        Tentu saja ada! Kami menyediakan 1 sesi Free Trial Class (durasi 30-45 menit) 100% gratis. Melalui sesi ini, anak bisa langsung merasakan asyiknya membuat proyek coding perdananya, sekaligus mentor kami akan membantu memetakan level dan minat belajar ananda.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- WhatsApp Help Box -->
+            <div class="mt-12 bg-gradient-to-r from-orange-50/80 via-white to-orange-50/80 border border-orange-100 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-sm">
+                <div>
+                    <h3 class="text-lg md:text-xl font-black text-brand-navy mb-1">Masih punya pertanyaan yang belum terjawab?</h3>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium">Tim konsultan edukasi kami siap membantu Ayah & Bunda memilihkan program terbaik.</p>
+                </div>
+                <a href="https://wa.me/" target="_blank" class="flex-shrink-0 inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-extrabold px-6 py-3.5 rounded-full shadow-lg shadow-green-500/25 active:scale-95 transition-all">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 2C6.495 2 2 6.495 2 12.031a9.98 9.98 0 0 0 1.554 5.342L2 22l4.78-1.517a9.99 9.99 0 0 0 5.251 1.488c5.536 0 10.031-4.495 10.031-10.031S17.567 2 12.031 2zm0 18.232a8.21 8.21 0 0 1-4.223-1.163l-.303-.18-3.136.996.999-3.058-.198-.315a8.2 8.2 0 1 1 6.861 3.72zm4.55-6.177c-.25-.125-1.477-.729-1.706-.813-.229-.083-.396-.125-.563.125-.167.25-.646.813-.792.98-.146.166-.292.187-.542.062s-1.054-.388-2.008-1.238c-.742-.662-1.243-1.48-1.389-1.73-.146-.25-.016-.385.109-.51.112-.112.25-.292.375-.438s.167-.25.25-.417a.52.52 0 0 0-.021-.5c-.062-.125-.562-1.354-.77-1.854-.203-.487-.41-.421-.563-.429l-.479-.008c-.167 0-.438.062-.667.312s-.875.854-.875 2.083c0 1.229.896 2.417 1.021 2.583.125.167 1.763 2.693 4.271 3.777.597.258 1.064.412 1.428.528.6.191 1.146.164 1.578.099.481-.072 1.477-.604 1.685-1.188.208-.583.208-1.083.146-1.188-.063-.104-.229-.167-.479-.292z"></path></svg>
+                    <span>Konsultasi via WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 10: FINAL CTA & FOOTER (RakitAI.id Style) ================= -->
+    <section class="relative w-full bg-brand-orange pt-20 pb-10 overflow-hidden text-white" id="trial">
         
         <!-- Dekorasi Background (Opsional: bisa diganti bentuk gelombang atau pattern) -->
         <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
@@ -631,6 +1174,84 @@ Ikuti kelas pemrograman kami! Tersedia secara tatap muka di cabang terdekat Anda
             <span class="absolute top-0 right-0 w-3.5 h-3.5 bg-red-500 border-2 border-white rounded-full"></span>
         </a>
     </div>
+
+    <!-- ================= JAVASCRIPT INTERACTIONS ================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // FAQ Accordion Interaction
+            const faqButtons = document.querySelectorAll('.faq-btn');
+            faqButtons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    const svgIcon = this.querySelector('.faq-icon svg');
+                    const isOpen = !content.classList.contains('hidden');
+
+                    // Tutup item FAQ lainnya (opsional untuk pengalaman accordion yang bersih)
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                    document.querySelectorAll('.faq-icon svg').forEach(svg => {
+                        svg.style.transform = 'rotate(0deg)';
+                    });
+
+                    // Toggle item yang sedang diklik
+                    if (!isOpen) {
+                        content.classList.remove('hidden');
+                        if (svgIcon) svgIcon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+            // Pricing Billing Switcher Interaction
+            const btnMonthly = document.getElementById('billing-monthly-btn');
+            const btnTerm = document.getElementById('billing-term-btn');
+            const elJuniorPrice = document.querySelector('.pricing-junior');
+            const elAiPrice = document.querySelector('.pricing-ai');
+            const elTeenPrice = document.querySelector('.pricing-teen');
+            const elPeriods = document.querySelectorAll('.pricing-period');
+            const elJuniorNote = document.querySelector('.pricing-junior-note');
+            const elAiNote = document.querySelector('.pricing-ai-note');
+            const elTeenNote = document.querySelector('.pricing-teen-note');
+
+            if (btnMonthly && btnTerm) {
+                btnMonthly.addEventListener('click', function () {
+                    // Update tampilan tombol
+                    btnMonthly.classList.add('bg-white', 'text-brand-navy', 'shadow-sm');
+                    btnMonthly.classList.remove('text-gray-500');
+                    btnTerm.classList.remove('bg-white', 'text-brand-navy', 'shadow-sm');
+                    btnTerm.classList.add('text-gray-500');
+
+                    // Update harga bulanan
+                    if (elJuniorPrice) elJuniorPrice.textContent = '349.000';
+                    if (elAiPrice) elAiPrice.textContent = '499.000';
+                    if (elTeenPrice) elTeenPrice.textContent = '699.000';
+
+                    elPeriods.forEach(p => p.textContent = '/bulan');
+
+                    if (elJuniorNote) elJuniorNote.textContent = 'Biaya investasi reguler bulanan (4 sesi)';
+                    if (elAiNote) elAiNote.textContent = 'Pilihan favorit 65% orang tua siswa Rakit AI';
+                    if (elTeenNote) elTeenNote.textContent = 'Persiapan portofolio & karir masa depan (4 sesi)';
+                });
+
+                btnTerm.addEventListener('click', function () {
+                    // Update tampilan tombol
+                    btnTerm.classList.add('bg-white', 'text-brand-navy', 'shadow-sm');
+                    btnTerm.classList.remove('text-gray-500');
+                    btnMonthly.classList.remove('bg-white', 'text-brand-navy', 'shadow-sm');
+                    btnMonthly.classList.add('text-gray-500');
+
+                    // Update harga term (3 bulan - diskon 15%)
+                    if (elJuniorPrice) elJuniorPrice.textContent = '890.000';
+                    if (elAiPrice) elAiPrice.textContent = '1.270.000';
+                    if (elTeenPrice) elTeenPrice.textContent = '1.780.000';
+
+                    elPeriods.forEach(p => p.textContent = '/term (3 bln)');
+
+                    if (elJuniorNote) elJuniorNote.textContent = '🎉 Hemat Rp 157.000 (12 sesi penuh)';
+                    if (elAiNote) elAiNote.textContent = '🎉 Hemat Rp 227.000 + Bonus Merchandise';
+                    if (elTeenNote) elTeenNote.textContent = '🎉 Hemat Rp 317.000 + Sesi Konsultasi Eksklusif';
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
