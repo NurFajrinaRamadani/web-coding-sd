@@ -61,19 +61,16 @@
                 <img alt="Rakit AI Logo" class="h-12 w-auto object-contain" src="/logo.png"/>
             </a>
             
-            <nav class="hidden md:flex items-center gap-8 text-sm font-bold text-gray-600">
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-bold text-gray-600">
                 <a href="#programs" class="hover:text-brand-orange transition-colors">Program</a>
                 <a href="#pricing" class="hover:text-brand-orange transition-colors">Paket & Biaya</a>
+                <a href="#ekskul" class="hover:text-brand-orange transition-colors">Ekstrakurikuler</a>
                 <a href="#testimonials" class="hover:text-brand-orange transition-colors">Testimoni</a>
                 <a href="#faq" class="hover:text-brand-orange transition-colors">FAQ</a>
             </nav>
 
             <div class="flex items-center gap-3">
-                <div class="hidden sm:flex items-center bg-gray-100 p-0.5 rounded-full text-[11px] font-extrabold text-gray-500">
-                    <span class="bg-white text-brand-navy px-2 py-0.5 rounded-full shadow-sm">ID</span>
-                    <span class="px-1.5 py-0.5 text-gray-400 cursor-pointer hover:text-gray-700">EN</span>
-                </div>
-                <a class="bg-brand-orange hover:bg-brand-orangeHover text-white text-[11px] sm:text-xs font-black px-4 py-2 rounded-full uppercase tracking-wider transition-all shadow-md active:scale-95" href="#trial">
+                <a class="bg-brand-orange hover:bg-brand-orangeHover text-white text-[11px] sm:text-xs font-black px-4 sm:px-5 py-2.5 rounded-full uppercase tracking-wider transition-all shadow-md active:scale-95" href="#trial">
                     Free Trial
                 </a>
                 <button class="md:hidden p-1 text-brand-navy" type="button">
@@ -95,55 +92,48 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
+            <div class="max-w-3xl mx-auto text-center">
                 
-                <div class="flex-1 text-center md:text-left">
-                    
-                    <div class="inline-flex items-center gap-2 bg-[#FF9B85] text-white px-4 py-2 rounded-full mb-4 shadow-sm">
-                        <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
-                        <span class="text-[10px] font-black tracking-widest uppercase">IT, AI & Coding School</span>
-                    </div>
-                    
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-brand-navy tracking-tight leading-[1.15] mb-4">
-                        Coding Today,<br/>
-                        <span class="text-brand-orange relative inline-block">
-                            Leading Tomorrow
-                            <svg class="absolute -bottom-2 left-0 w-full h-3 text-brand-orange/30" preserveaspectratio="none" viewbox="0 0 100 10"><path d="M0 5 Q 50 0 100 5" fill="transparent" stroke="currentColor" stroke-width="4"></path></svg>
-                        </span>
-                    </h1>
-                    
-                    <p class="text-sm md:text-base text-gray-500 font-medium leading-relaxed max-w-lg mx-auto md:mx-0 mb-8">
-                        Mempersiapkan masa depan anak usia 5–18 tahun lewat kurikulum berstandar internasional dari <strong class="text-gray-700">UK & Jepang</strong> dengan metode yang menyenangkan.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start mb-8">
-                        <a class="bg-brand-orange hover:bg-brand-orangeHover text-white text-sm font-black py-3.5 px-8 rounded-full shadow-lg shadow-orange-500/25 uppercase tracking-wider flex items-center justify-center gap-2 transition-all active:scale-95" href="#trial">
-                            <span>Daftar Free Trial</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                        </a>
-                        <a class="bg-white hover:bg-gray-50 text-brand-navy border-2 border-brand-navy text-sm font-bold py-3.5 px-8 rounded-full transition-all active:scale-95" href="#programs">
-                            Lihat Pilihan Program
-                        </a>
-                    </div>
-
-                    <div class="grid grid-cols-3 gap-2 md:gap-4 max-w-md mx-auto md:mx-0">
-                        <div class="bg-white p-3 rounded-xl border border-gray-100 shadow-sm text-center">
-                            <span class="block text-lg font-black text-brand-orange">+10.000</span>
-                            <span class="text-[10px] font-bold text-gray-500">Siswa Aktif</span>
-                        </div>
-                        <div class="bg-white p-3 rounded-xl border border-gray-100 shadow-sm text-center">
-                            <span class="block text-lg font-black text-brand-navy">40+ Cabang</span>
-                            <span class="text-[10px] font-bold text-gray-500">& Online</span>
-                        </div>
-                        <div class="bg-white p-3 rounded-xl border border-gray-100 shadow-sm text-center">
-                            <span class="block text-lg font-black text-brand-orange">UK & Jepang</span>
-                            <span class="text-[10px] font-bold text-gray-500">Kurikulum</span>
-                        </div>
-                    </div>
+                <div class="inline-flex items-center gap-2 bg-[#FF9B85] text-white px-4 py-2 rounded-full mb-6 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                    <span class="text-[10px] font-black tracking-widest uppercase">IT, AI & Coding School</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-brand-navy tracking-tight leading-[1.15] mb-5">
+                    Coding Today,<br/>
+                    <span class="text-brand-orange relative inline-block">
+                        Leading Tomorrow
+                        <svg class="absolute -bottom-2 left-0 w-full h-3 text-brand-orange/30" preserveaspectratio="none" viewbox="0 0 100 10"><path d="M0 5 Q 50 0 100 5" fill="transparent" stroke="currentColor" stroke-width="4"></path></svg>
+                    </span>
+                </h1>
+                
+                <p class="text-sm md:text-base lg:text-lg text-gray-500 font-medium leading-relaxed max-w-xl mx-auto mb-8">
+                    Mempersiapkan masa depan anak usia 5–18 tahun lewat kurikulum berstandar internasional dari <strong class="text-gray-700">UK & Jepang</strong> dengan metode yang menyenangkan.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-3.5 justify-center items-center mb-10">
+                    <a class="bg-brand-orange hover:bg-brand-orangeHover text-white text-sm font-black py-3.5 px-8 rounded-full shadow-lg shadow-orange-500/25 uppercase tracking-wider flex items-center justify-center gap-2 transition-all active:scale-95" href="#trial">
+                        <span>Daftar Free Trial</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </a>
+                    <a class="bg-white hover:bg-gray-50 text-brand-navy border-2 border-brand-navy text-sm font-bold py-3.5 px-8 rounded-full transition-all active:scale-95 shadow-sm" href="#programs">
+                        Lihat Pilihan Program
+                    </a>
                 </div>
 
-                <div class="flex-1 w-full relative z-20">
-                    <img src="/codingkid.png" alt="Anak belajar coding dan HTML" class="w-full h-auto object-contain animate-float drop-shadow-2xl transition-transform duration-500 hover:scale-105" />
+                <div class="grid grid-cols-3 gap-3 md:gap-5 max-w-md mx-auto">
+                    <div class="bg-white p-3.5 rounded-xl border border-gray-100 shadow-sm text-center">
+                        <span class="block text-lg md:text-xl font-black text-brand-orange">+10.000</span>
+                        <span class="text-[10px] md:text-xs font-bold text-gray-500">Siswa Aktif</span>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl border border-gray-100 shadow-sm text-center">
+                        <span class="block text-lg md:text-xl font-black text-brand-navy">40+ Cabang</span>
+                        <span class="text-[10px] md:text-xs font-bold text-gray-500">& Online</span>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl border border-gray-100 shadow-sm text-center">
+                        <span class="block text-lg md:text-xl font-black text-brand-orange">UK & Jepang</span>
+                        <span class="text-[10px] md:text-xs font-bold text-gray-500">Kurikulum</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -238,50 +228,31 @@
                 </h2>
             </div>
 
-            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-                <div class="flex-1 w-full relative">
-                    <div class="relative w-full max-w-md mx-auto">
-                        <svg class="absolute inset-0 w-full h-full text-brand-orange -z-10 transform scale-110 translate-x-4 translate-y-4" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="currentColor" d="M42.7,-73.4C55.9,-67.1,67.1,-56.1,75.4,-42.9C83.7,-29.7,89.1,-14.8,87.3,-0.9C85.5,12.9,76.5,25.9,66.8,36.7C57.1,47.5,46.6,56.1,34.7,63.4C22.7,70.7,9.3,76.7,-4.8,84.9C-18.9,93,-33.8,103.3,-46.3,98.9C-58.7,94.6,-68.8,75.6,-76.1,57.8C-83.4,40,-87.9,23.5,-85.4,7.8C-82.9,-7.9,-73.4,-22.8,-62.8,-34.9C-52.2,-47,-40.6,-56.3,-27.9,-63C-15.3,-69.7,-1.6,-73.8,13.1,-75.5C27.8,-77.3,42.7,-79.7,42.7,-73.4Z" transform="translate(100 100)" />
-                        </svg>
-                        <div class="relative rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
-                            <img src="/kid3.jpg" alt="Anak belajar coding" class="w-full h-auto object-cover aspect-[4/5] md:aspect-square hover:scale-105 transition-transform duration-500" />
-                        </div>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+                <div class="bg-brand-bgLight p-6 sm:p-8 rounded-3xl border border-gray-100 shadow-sm flex flex-col group hover:-translate-y-1 hover:shadow-card transition-all duration-300">
+                    <div class="mb-4 flex-shrink-0 w-10 h-10 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold text-xl transition-transform group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white">✓</div>
+                    <h3 class="text-xl md:text-2xl font-black text-brand-navy mb-2 group-hover:text-brand-green transition-colors">From Player to Developer</h3>
+                    <p class="text-gray-500 font-medium leading-relaxed text-sm md:text-base">Ubah kebiasaan main game menjadi skill produktif. Anak tidak hanya mengonsumsi teknologi, tapi menciptakannya.</p>
                 </div>
 
-                <div class="flex-1 w-full">
-                    <div class="space-y-8">
-                        <div class="flex items-start gap-4 group">
-                            <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold text-xl transition-transform group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white">✓</div>
-                            <div>
-                                <h3 class="text-xl md:text-2xl font-black text-brand-navy mb-2 group-hover:text-brand-green transition-colors">From Player to Developer</h3>
-                                <p class="text-gray-500 font-medium leading-relaxed">Ubah kebiasaan main game menjadi skill produktif. Anak tidak hanya mengonsumsi teknologi, tapi menciptakannya.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 group">
-                            <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold text-xl transition-transform group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white">✓</div>
-                            <div>
-                                <h3 class="text-xl md:text-2xl font-black text-brand-navy mb-2 group-hover:text-brand-green transition-colors">21st Century Skill</h3>
-                                <p class="text-gray-500 font-medium leading-relaxed">Melatih logika berpikir kritis, problem solving, dan kreativitas yang sangat dibutuhkan di masa depan.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 group">
-                            <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold text-xl transition-transform group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white">✓</div>
-                            <div>
-                                <h3 class="text-xl md:text-2xl font-black text-brand-navy mb-2 group-hover:text-brand-green transition-colors">Every Profession needs IT Skills</h3>
-                                <p class="text-gray-500 font-medium leading-relaxed">Dari dokter hingga desainer, semua profesi kini butuh literasi digital. Bekali anak dengan fondasi yang kuat.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-10">
-                        <a href="#trial" class="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navyDark text-white font-bold py-3 px-6 rounded-full transition-all shadow-lg active:scale-95">
-                            Mulai Belajar Sekarang
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
+                <div class="bg-brand-bgLight p-6 sm:p-8 rounded-3xl border border-gray-100 shadow-sm flex flex-col group hover:-translate-y-1 hover:shadow-card transition-all duration-300">
+                    <div class="mb-4 flex-shrink-0 w-10 h-10 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold text-xl transition-transform group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white">✓</div>
+                    <h3 class="text-xl md:text-2xl font-black text-brand-navy mb-2 group-hover:text-brand-green transition-colors">21st Century Skill</h3>
+                    <p class="text-gray-500 font-medium leading-relaxed text-sm md:text-base">Melatih logika berpikir kritis, problem solving, dan kreativitas yang sangat dibutuhkan di masa depan.</p>
                 </div>
+
+                <div class="bg-brand-bgLight p-6 sm:p-8 rounded-3xl border border-gray-100 shadow-sm flex flex-col group hover:-translate-y-1 hover:shadow-card transition-all duration-300">
+                    <div class="mb-4 flex-shrink-0 w-10 h-10 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold text-xl transition-transform group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white">✓</div>
+                    <h3 class="text-xl md:text-2xl font-black text-brand-navy mb-2 group-hover:text-brand-green transition-colors">Every Profession needs IT Skills</h3>
+                    <p class="text-gray-500 font-medium leading-relaxed text-sm md:text-base">Dari dokter hingga desainer, semua profesi kini butuh literasi digital. Bekali anak dengan fondasi yang kuat.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#trial" class="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navyDark text-white font-bold py-3.5 px-8 rounded-full transition-all shadow-lg active:scale-95">
+                    Mulai Belajar Sekarang
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
             </div>
         </div>
     </section>
@@ -810,6 +781,240 @@ Ikuti kelas pemrograman kami! Tersedia secara tatap muka di cabang terdekat Anda
                     Coba Free Trial Dulu
                 </a>
             </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION: EKSTRAKURIKULER SEKOLAH (School Partnership / Ekskul Coding & AI) ================= -->
+    <section class="relative w-full py-20 md:py-28 bg-[#FCFDFE] overflow-hidden border-t border-gray-100/80" id="ekskul">
+        <!-- Dekorasi Background -->
+        <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-orange/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+        <div class="absolute bottom-10 left-5 w-80 h-80 bg-blue-50/50 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header Section -->
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                <span class="text-[11px] sm:text-xs font-black uppercase tracking-widest text-brand-orange bg-orange-50 border border-orange-100 px-4 py-1.5 rounded-full inline-block mb-3">
+                    KEMITRAAN SEKOLAH
+                </span>
+                <h2 class="text-3xl md:text-5xl font-black text-brand-navy leading-tight tracking-tight">
+                    Hadirkan Ekstrakurikuler <span class="text-brand-orange">Coding & AI</span> di Sekolah Anda
+                </h2>
+                <p class="text-sm md:text-base text-gray-500 font-medium mt-3 leading-relaxed">
+                    Rakit AI bekerja sama dengan sekolah dasar dan menengah untuk menyelenggarakan program ekstrakurikuler teknologi interaktif, mempersiapkan siswa menghadapi era digital sejak dini.
+                </p>
+            </div>
+
+            <!-- Card Paket Ekskul (Grid 3 Kolom) -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-16 pt-2">
+                
+                <!-- CARD 1: Junior Tech Explorer -->
+                <div class="bg-white rounded-[32px] p-7 sm:p-8 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between relative group">
+                    <div>
+                        <!-- Header Card -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-flex items-center gap-1.5 bg-[#E8F4FF] text-[#2B7FFF] font-extrabold text-xs px-3.5 py-1.5 rounded-full">
+                                <span>🎒</span> Kelas 1 - 3 SD
+                            </span>
+                            <span class="text-[11px] font-bold text-gray-400">Tingkat Dasar</span>
+                        </div>
+
+                        <h3 class="text-2xl font-black text-brand-navy mb-2">Junior Tech Explorer</h3>
+                        
+                        <!-- Fokus Materi -->
+                        <div class="bg-gray-50/90 rounded-2xl p-4 mb-6 border border-gray-100">
+                            <span class="text-[11px] font-black uppercase tracking-wider text-brand-navy/70 block mb-1">Fokus Pembelajaran:</span>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">
+                                Logika blok visual, animasi Scratch, dan pengenalan dasar komputer.
+                            </p>
+                        </div>
+
+                        <!-- Benefit List -->
+                        <div class="space-y-3.5 mb-8">
+                            <p class="text-xs font-extrabold uppercase tracking-wider text-brand-navy">Benefit Sekolah & Siswa:</p>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Modul berkala mingguan yang terstruktur</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Sertifikat pencapaian tingkat dasar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button Outline -->
+                    <a href="https://wa.me/?text=Halo%20Rakit%20AI,%20saya%20tertarik%20mengajukan%20proposal%20ekskul%20Junior%20Tech%20Explorer%20untuk%20sekolah%20kami" target="_blank" class="w-full py-4 px-6 rounded-full border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-black text-xs sm:text-sm transition-all duration-300 text-center block shadow-sm hover:shadow-md active:scale-95">
+                        Ajukan Proposal
+                    </a>
+                </div>
+
+                <!-- CARD 2: AI & Game Creator (HIGHLIGHTED) -->
+                <div class="bg-white rounded-[32px] p-7 sm:p-8 border-2 border-brand-orange shadow-[0_20px_50px_rgba(232,78,56,0.16)] hover:shadow-2xl transition-all duration-300 lg:-translate-y-3 flex flex-col justify-between relative z-20 group">
+                    <!-- Highlight Badge -->
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-orange to-[#D63E29] text-white font-black text-[11px] tracking-wider uppercase px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+                        <span>⭐</span> PROGRAM PALING DIMINATI
+                    </div>
+
+                    <div>
+                        <!-- Header Card -->
+                        <div class="flex items-center justify-between mb-4 pt-1">
+                            <span class="inline-flex items-center gap-1.5 bg-[#FFF0ED] text-brand-orange font-extrabold text-xs px-3.5 py-1.5 rounded-full">
+                                <span>🎮</span> Kelas 4 - 6 SD
+                            </span>
+                            <span class="text-[11px] font-black text-brand-orange bg-orange-100/70 px-2.5 py-0.5 rounded-md">Paling Populer</span>
+                        </div>
+
+                        <h3 class="text-2xl font-black text-brand-navy mb-2">AI & Game Creator</h3>
+                        
+                        <!-- Fokus Materi -->
+                        <div class="bg-orange-50/70 rounded-2xl p-4 mb-6 border border-orange-100">
+                            <span class="text-[11px] font-black uppercase tracking-wider text-brand-orange block mb-1">Fokus Pembelajaran:</span>
+                            <p class="text-xs sm:text-sm text-gray-700 font-medium leading-relaxed">
+                                Pembuatan game (Roblox / 2D Godot), pengenalan konsep AI, dan proyek IoT sederhana.
+                            </p>
+                        </div>
+
+                        <!-- Benefit List -->
+                        <div class="space-y-3.5 mb-8">
+                            <p class="text-xs font-extrabold uppercase tracking-wider text-brand-navy">Benefit Sekolah & Siswa:</p>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-700 font-medium">Mentor berpengalaman hadir ke sekolah (offline/hybrid)</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-700 font-medium">Pameran karya akhir semester</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-700 font-medium">Bimbingan lomba koding</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button Primary Orange -->
+                    <a href="https://wa.me/?text=Halo%20Rakit%20AI,%20saya%20ingin%20konsultasi%20program%20ekskul%20AI%20%26%20Game%20Creator%20untuk%20sekolah" target="_blank" class="w-full py-4 px-6 rounded-full bg-brand-orange hover:bg-brand-orangeHover text-white font-black text-xs sm:text-sm transition-all duration-300 text-center block shadow-lg shadow-orange-500/30 active:scale-95">
+                        Konsultasi Program
+                    </a>
+                </div>
+
+                <!-- CARD 3: Young Tech Leaders -->
+                <div class="bg-white rounded-[32px] p-7 sm:p-8 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between relative group">
+                    <div>
+                        <!-- Header Card -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-flex items-center gap-1.5 bg-[#F3E8FF] text-[#8B5CF6] font-extrabold text-xs px-3.5 py-1.5 rounded-full">
+                                <span>⚡</span> Jenjang Lanjutan / SMP
+                            </span>
+                            <span class="text-[11px] font-bold text-gray-400">Tingkat Lanjut</span>
+                        </div>
+
+                        <h3 class="text-2xl font-black text-brand-navy mb-2">Young Tech Leaders</h3>
+                        
+                        <!-- Fokus Materi -->
+                        <div class="bg-gray-50/90 rounded-2xl p-4 mb-6 border border-gray-100">
+                            <span class="text-[11px] font-black uppercase tracking-wider text-brand-navy/70 block mb-1">Fokus Pembelajaran:</span>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">
+                                Pemrograman Python, Web Design (HTML/CSS), serta pemecahan masalah berbasis proyek nyata.
+                            </p>
+                        </div>
+
+                        <!-- Benefit List -->
+                        <div class="space-y-3.5 mb-8">
+                            <p class="text-xs font-extrabold uppercase tracking-wider text-brand-navy">Benefit Sekolah & Siswa:</p>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-purple-100 text-brand-purple flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Portofolio karya digital</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-purple-100 text-brand-purple flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="text-xs sm:text-sm text-gray-600 font-medium">Pendampingan expo teknologi sekolah</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button Outline -->
+                    <a href="https://wa.me/?text=Halo%20Rakit%20AI,%20saya%20tertarik%20mengajukan%20proposal%20ekskul%20Young%20Tech%20Leaders%20untuk%20sekolah%20kami" target="_blank" class="w-full py-4 px-6 rounded-full border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-black text-xs sm:text-sm transition-all duration-300 text-center block shadow-sm hover:shadow-md active:scale-95">
+                        Ajukan Proposal
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Nilai Tambah Sekolah (4 Kartu Mini Horizontal) -->
+            <div class="mb-14">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl md:text-2xl font-black text-brand-navy">Nilai Tambah untuk Sekolah</h3>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium mt-1">Dukungan holistik agar kegiatan ekstrakurikuler berjalan efektif dan berkelanjutan</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+                    <!-- Mini Card 1 -->
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-3.5 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl flex-shrink-0 shadow-inner">
+                            📚
+                        </div>
+                        <div>
+                            <h4 class="font-black text-sm text-brand-navy mb-1">Kurikulum Terstandar</h4>
+                            <p class="text-xs text-gray-500 font-medium leading-relaxed">Disesuaikan dengan kalender akademik sekolah.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mini Card 2 -->
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-3.5 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-11 h-11 rounded-xl bg-orange-50 text-brand-orange flex items-center justify-center text-xl flex-shrink-0 shadow-inner">
+                            👨‍🏫
+                        </div>
+                        <div>
+                            <h4 class="font-black text-sm text-brand-navy mb-1">Mentor Tersertifikasi</h4>
+                            <p class="text-xs text-gray-500 font-medium leading-relaxed">Instruktur profesional, berpengalaman, dan ramah anak.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mini Card 3 -->
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-3.5 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-11 h-11 rounded-xl bg-emerald-50 text-brand-green flex items-center justify-center text-xl flex-shrink-0 shadow-inner">
+                            📊
+                        </div>
+                        <div>
+                            <h4 class="font-black text-sm text-brand-navy mb-1">Laporan Berkala</h4>
+                            <p class="text-xs text-gray-500 font-medium leading-relaxed">Rekap laporan perkembangan minat dan bakat siswa untuk sekolah/guru.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mini Card 4 -->
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-3.5 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-11 h-11 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl flex-shrink-0 shadow-inner">
+                            🏆
+                        </div>
+                        <div>
+                            <h4 class="font-black text-sm text-brand-navy mb-1">Support Fasilitas & Lomba</h4>
+                            <p class="text-xs text-gray-500 font-medium leading-relaxed">Pendampingan pameran karya dan kejuaraan koding.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner Call to Action (CTA) -->
+            <div class="max-w-5xl mx-auto bg-gradient-to-r from-orange-50 via-white to-orange-50/80 border border-orange-200/90 rounded-2xl md:rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm text-center md:text-left">
+                <div class="flex flex-col sm:flex-row items-center gap-4 max-w-2xl">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-orange text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-md shadow-orange-500/25">
+                        🤝
+                    </div>
+                    <div>
+                        <h4 class="font-black text-brand-navy text-base md:text-lg mb-1">Tertarik membuka ekskul Rakit AI di sekolah Bapak/Ibu?</h4>
+                        <p class="text-xs md:text-sm text-gray-500 font-medium leading-relaxed">
+                            Hubungi tim kemitraan kami untuk proposal lengkap, skema program offline/hybrid, dan presentasi gratis ke sekolah.
+                        </p>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/?text=Halo%20Tim%20Kemitraan%20Rakit%20AI,%20kami%20tertarik%20membuka%20ekskul%20coding%20%26%20AI%20di%20sekolah%20kami.%20Boleh%20minta%20informasi%20proposalnya?" target="_blank" class="flex-shrink-0 inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-extrabold px-6 sm:px-7 py-3.5 rounded-full shadow-lg shadow-green-500/25 active:scale-95 transition-all whitespace-nowrap">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.842-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    <span>Hubungi Tim Kemitraan via WhatsApp</span>
+                </a>
+            </div>
+
         </div>
     </section>
 
