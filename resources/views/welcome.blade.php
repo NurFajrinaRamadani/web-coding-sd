@@ -366,57 +366,27 @@
     </div>
 
     <!-- ================= SECTION 5: ONLINE / OFFLINE ================= -->
-    <section class="relative w-full py-20 md:py-28 bg-white overflow-hidden">
-        
-        <div class="absolute top-10 right-10 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl -z-10"></div>
-        <div class="absolute bottom-10 left-10 w-72 h-72 bg-blue-100 rounded-full blur-3xl -z-10"></div>
+    <!-- ================= SECTION 5: ONLINE / OFFLINE ================= -->
+<section class="relative w-full py-20 md:py-28 bg-white overflow-hidden">
+    
+    <div class="absolute top-10 right-10 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl -z-10"></div>
+    <div class="absolute bottom-10 left-10 w-72 h-72 bg-blue-100 rounded-full blur-3xl -z-10"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                
-                <div class="flex-1 text-center lg:text-left">
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-brand-navy leading-[1.15] mb-6">
-                        We Are Available <br class="hidden lg:block" />
-                        For <span class="text-brand-orange">Online / Offline</span> Class!
-                    </h2>
-                    <p class="text-base md:text-lg text-gray-500 font-medium leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
-Ikuti kelas pemrograman kami! Tersedia secara tatap muka di cabang terdekat Anda atau secara daring dengan jadwal fleksibel yang bisa Anda akses kapan saja, di mana saja. Pilih salah satu opsi yang paling sesuai untuk Anda!                    </p>
-                    <a href="#trial" class="inline-flex items-center justify-center bg-brand-orange hover:bg-brand-orangeHover text-white text-sm md:text-base font-black py-4 px-8 rounded-full shadow-lg shadow-orange-500/30 uppercase tracking-wider transition-all active:scale-95">
-                        Book Free Trial
-                    </a>
-                </div>
-
-                <div class="flex-1 w-full relative h-[400px] md:h-[500px]">
-                    
-                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[65%] md:w-[60%] z-20">
-                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Online Class" class="w-full h-auto rounded-2xl shadow-2xl border-4 border-white object-cover aspect-video" />
-                    </div>
-
-                    <div class="absolute top-0 left-0 w-[35%] z-10 animate-float">
-                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Siswa" class="w-full h-auto rounded-xl shadow-lg border-4 border-white object-cover aspect-square" />
-                    </div>
-
-                    <div class="absolute bottom-4 right-0 w-[45%] z-30 animate-float" style="animation-delay: 1s;">
-                        <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Offline Class" class="w-full h-auto rounded-xl shadow-xl border-4 border-white object-cover aspect-[4/3]" />
-                    </div>
-
-                    <div class="absolute bottom-0 left-4 md:left-12 w-[30%] z-30 animate-float" style="animation-delay: 2s;">
-                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Happy Kid" class="w-full h-auto rounded-xl shadow-lg border-4 border-white object-cover aspect-[3/4]" />
-                    </div>
-
-                    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 z-10 bg-white p-3 rounded-full shadow-lg text-brand-orange animate-bounce">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    </div>
-                    <div class="absolute bottom-1/4 left-1/4 z-10 bg-brand-orange p-2.5 rounded-full shadow-lg text-white animate-spin" style="animation-duration: 10s;">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
-                    </div>
-                    <div class="absolute top-10 right-10 z-0 bg-blue-400 p-4 rounded-full opacity-50 blur-sm"></div>
-                    <div class="absolute bottom-16 right-16 z-0 bg-yellow-400 p-6 rounded-full opacity-60 blur-md"></div>
-
-                </div>
-            </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-brand-navy leading-[1.15] mb-6">
+                We Are Available <br class="hidden lg:block" />
+                For <span class="text-brand-orange">Online / Offline</span> Class!
+            </h2>
+            <p class="text-base md:text-lg text-gray-500 font-medium leading-relaxed mb-8 max-w-lg mx-auto">
+                Ikuti kelas pemrograman kami! Tersedia secara tatap muka di cabang terdekat Anda atau secara daring dengan jadwal fleksibel yang bisa Anda akses kapan saja, di mana saja. Pilih salah satu opsi yang paling sesuai untuk Anda!
+            </p>
+            <a href="#trial" class="inline-flex items-center justify-center bg-brand-orange hover:bg-brand-orangeHover text-white text-sm md:text-base font-black py-4 px-8 rounded-full shadow-lg shadow-orange-500/30 uppercase tracking-wider transition-all active:scale-95">
+                Book Free Trial
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
 
         {{-- <!-- ================= SECTION 6: STUDENT PROJECT PORTFOLIO ================= --> --}}
@@ -1292,85 +1262,135 @@ Ikuti kelas pemrograman kami! Tersedia secara tatap muka di cabang terdekat Anda
         </div>
     </section>
 
-    <!-- ================= SECTION 10: FINAL CTA & FOOTER (RakitAI.id Style) ================= -->
-    <section class="relative w-full bg-brand-orange pt-20 pb-10 overflow-hidden text-white" id="trial">
-        
-        <!-- Dekorasi Background (Opsional: bisa diganti bentuk gelombang atau pattern) -->
-        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-            <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 100 C 30 80, 50 30, 100 0 L100 100 Z" fill="#FFFFFF"/>
-            </svg>
-        </div>
+<!-- ================= SECTION 10: FINAL CTA ================= -->
+<section class="relative w-full bg-brand-orange text-white pt-28 md:pt-36 pb-40 md:pb-48 overflow-hidden" id="trial">
 
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            
-            <!-- Judul Besar -->
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
-                Siap Belajar Teknologi <br class="hidden md:block" />
-                Tanpa Harus Bingung
-            </h2>
+    <!-- Gelombang atas (putih) -->
+    <svg class="absolute top-0 left-0 w-full h-[70px] md:h-[110px]" preserveAspectRatio="none" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0 L1440 0 L1440 60 C 1280 100, 1120 20, 960 60 C 640 100, 320 0, 0 60 Z" fill="#FFFFFF"/>
+    </svg>
 
-            <!-- Deskripsi -->
-            <p class="text-base md:text-lg text-white/90 font-medium leading-relaxed mb-10 max-w-2xl mx-auto">
-                Gabung sekarang dan mulai langkah pertamamu bareng mentor profesional, komunitas suportif, dan support system yang selalu siap bantu kamu berkembang.
-            </p>
+    <!-- Gelombang bawah (navy, nyambung ke footer) -->
+    <svg class="absolute bottom-0 left-0 w-full h-[70px] md:h-[110px]" preserveAspectRatio="none" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 120 L0 60 C 320 0, 640 100, 960 60 C 1120 40, 1280 80, 1440 60 L1440 120 Z" fill="#121D32"/>
+    </svg>
 
-            <!-- FORM INPUT EMAIL + TOMBOL -->
-            <!-- Dibuat rounded-full dan menempel jadi satu kesatuan -->
-            <form class="flex flex-col sm:flex-row items-center justify-center w-full max-w-2xl mx-auto mb-16" onsubmit="event.preventDefault(); alert('Terima kasih! Cek email kamu untuk informasi selanjutnya.');">
-                <div class="relative w-full">
-                    <input 
-                        type="email" 
-                        placeholder="Masukan Email..." 
-                        required
-                        class="w-full pl-6 pr-4 sm:pr-48 py-4 rounded-full sm:rounded-r-none sm:rounded-l-full text-brand-navy font-medium focus:outline-none focus:ring-4 focus:ring-white/30 border-none shadow-lg"
-                    />
-                    <!-- Tombol ditaruh di dalam input (desktop), dan di bawah (mobile) -->
-                    <button 
-                        type="submit" 
-                        class="w-full sm:w-auto sm:absolute sm:right-1 sm:top-1 sm:bottom-1 px-8 py-4 sm:py-0 mt-3 sm:mt-0 bg-[#D63E29] hover:bg-[#C43522] text-white font-bold rounded-full transition-all shadow-md active:scale-95 flex items-center justify-center"
-                    >
-                        Ambil Kelas Gratis
-                    </button>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-12 items-center">
+
+            <!-- KIRI: headline -->
+            <div class="relative text-center lg:text-left">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-5">
+                    Dari main game,<br/>
+                    jadi <span class="relative inline-block text-brand-yellow">
+                        bikin game!
+                        <svg class="absolute -bottom-2 left-0 w-full h-3 text-white/60" preserveAspectRatio="none" viewBox="0 0 100 10"><path d="M0 5 Q 50 0 100 5" fill="transparent" stroke="currentColor" stroke-width="4"></path></svg>
+                    </span>
+                </h2>
+                <p class="text-base md:text-lg text-white/90 font-medium leading-relaxed mb-8 max-w-md mx-auto lg:mx-0">
+                    Ajak ananda coba 1 kelas gratis bareng mentor Rakit AI. Selesai sesi, dia sudah punya proyek coding pertamanya.
+                </p>
+
+                <!-- 3 langkah -->
+                <div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3 max-w-md sm:max-w-none mx-auto lg:mx-0 lg:max-w-md xl:max-w-none">
+                    <div class="flex-1 flex items-center gap-3 bg-white/15 rounded-2xl px-4 py-3 text-left">
+                        <span class="w-8 h-8 rounded-full bg-brand-yellow text-brand-navy font-black flex items-center justify-center flex-shrink-0">1</span>
+                        <span class="text-sm font-bold leading-tight">Isi email</span>
+                    </div>
+                    <div class="flex-1 flex items-center gap-3 bg-white/15 rounded-2xl px-4 py-3 text-left">
+                        <span class="w-8 h-8 rounded-full bg-brand-yellow text-brand-navy font-black flex items-center justify-center flex-shrink-0">2</span>
+                        <span class="text-sm font-bold leading-tight">Atur jadwal trial</span>
+                    </div>
+                    <div class="flex-1 flex items-center gap-3 bg-white/15 rounded-2xl px-4 py-3 text-left">
+                        <span class="w-8 h-8 rounded-full bg-brand-yellow text-brand-navy font-black flex items-center justify-center flex-shrink-0">3</span>
+                        <span class="text-sm font-bold leading-tight">Anak bikin proyek</span>
+                    </div>
                 </div>
-            </form>
+            </div>
 
-            <!-- Copyright -->
-            <p class="text-sm text-white/80 font-medium mb-8">
-                Copyright © 2025. PT Pintar Kapan Aja (PIKA)
-            </p>
+            <!-- KANAN: kartu form (gaya kartu Ekstrakurikuler) -->
+            <div class="max-w-md w-full mx-auto lg:ml-auto">
+                <div class="bg-white text-brand-navy rounded-[32px] p-7 sm:p-8 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.12)]">
 
-            <!-- Footer Links Kecil -->
-            <div class="flex flex-wrap justify-center gap-6 text-sm font-bold text-white/90 mb-8">
-                <a href="#" class="hover:text-white hover:underline transition-all">Instagram</a>
-                <a href="#" class="hover:text-white hover:underline transition-all">YouTube</a>
-                <a href="#" class="hover:text-white hover:underline transition-all">LinkedIn</a>
-                <a href="#" class="hover:text-white hover:underline transition-all">Kebijakan Privasi</a>
-                <a href="#" class="hover:text-white hover:underline transition-all">Syarat & Ketentuan</a>
+                    <!-- Header card -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="inline-flex items-center gap-1.5 bg-[#FFF0ED] text-brand-orange font-extrabold text-xs px-3.5 py-1.5 rounded-full">
+                            <span>🎁</span> Free Trial
+                        </span>
+                        <span class="text-xs font-bold text-gray-400">30 - 45 Menit</span>
+                    </div>
+
+                    <h3 class="text-2xl font-black text-brand-navy mb-2">Ambil Kelas Gratis</h3>
+                    <p class="text-xs sm:text-sm text-gray-500 font-medium mb-6 leading-relaxed">
+                        Online via Zoom atau tatap muka di cabang terdekat. Mentor kami juga akan memetakan level dan minat ananda.
+                    </p>
+
+                    <form class="space-y-3" onsubmit="event.preventDefault(); alert('Terima kasih! Cek email kamu untuk informasi selanjutnya.');">
+                        <input
+                            type="email"
+                            placeholder="Email Ayah/Bunda"
+                            required
+                            class="w-full py-4 px-6 rounded-full bg-[#F8FAFC] border border-gray-200 text-brand-navy text-xs sm:text-sm font-medium placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-brand-orange/20 focus:border-brand-orange transition"
+                        />
+                        <button type="submit" class="w-full py-4 px-6 rounded-full bg-brand-orange hover:bg-brand-orangeHover text-white font-black text-xs sm:text-sm transition-all duration-300 text-center block shadow-lg shadow-orange-500/30 active:scale-95">
+                            Daftar Free Trial
+                        </button>
+                    </form>
+
+                    <div class="flex items-center gap-3 my-5">
+                        <span class="h-px flex-1 bg-gray-100"></span>
+                        <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">atau</span>
+                        <span class="h-px flex-1 bg-gray-100"></span>
+                    </div>
+
+                    <a href="https://wa.me/" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-extrabold py-3.5 px-6 rounded-full shadow-lg shadow-green-500/25 active:scale-95 transition-all">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 2C6.495 2 2 6.495 2 12.031a9.98 9.98 0 0 0 1.554 5.342L2 22l4.78-1.517a9.99 9.99 0 0 0 5.251 1.488c5.536 0 10.031-4.495 10.031-10.031S17.567 2 12.031 2zm0 18.232a8.21 8.21 0 0 1-4.223-1.163l-.303-.18-3.136.996.999-3.058-.198-.315a8.2 8.2 0 1 1 6.861 3.72zm4.55-6.177c-.25-.125-1.477-.729-1.706-.813-.229-.083-.396-.125-.563.125-.167.25-.646.813-.792.98-.146.166-.292.187-.542.062s-1.054-.388-2.008-1.238c-.742-.662-1.243-1.48-1.389-1.73-.146-.25-.016-.385.109-.51.112-.112.25-.292.375-.438s.167-.25.25-.417a.52.52 0 0 0-.021-.5c-.062-.125-.562-1.354-.77-1.854-.203-.487-.41-.421-.563-.429l-.479-.008c-.167 0-.438.062-.667.312s-.875.854-.875 2.083c0 1.229.896 2.417 1.021 2.583.125.167 1.763 2.693 4.271 3.777.597.258 1.064.412 1.428.528.6.191 1.146.164 1.578.099.481-.072 1.477-.604 1.685-1.188.208-.583.208-1.083.146-1.188-.063-.104-.229-.167-.479-.292z"></path></svg>
+                        Chat via WhatsApp
+                    </a>
+                </div>
             </div>
 
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ================= GELOMBANG PEMISAH 5 (Putih/Abu ke Putih Footer) ================= -->
-    <!-- Opsional: Kalau mau tetap pakai gelombang sebelum footer -->
-    <!-- <div class="relative w-full h-[80px] md:h-[120px] -mt-10 z-10 bg-brand-bgLight">
-        <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 120 L0 60 C 320 0, 640 100, 960 60 C 1120 40, 1280 80, 1440 60 L1440 120 Z" fill="#FFFFFF"/>
-        </svg>
-    </div> -->
 
-    <!-- ================= FOOTER ================= -->
-    <footer class="max-w-7xl mx-auto mt-20 pt-10 pb-10 px-4 sm:px-6 lg:px-8 border-t border-gray-200 text-center">
-        <img alt="Rakit AI Logo" class="h-10 w-auto object-contain mx-auto mb-4" src="/logo.png"/>
-        <p class="text-sm text-gray-500 leading-relaxed mb-6 max-w-md mx-auto">Empowering next-generation digital creators, problem solvers & leaders with coding and AI education.</p>
-        <div class="flex justify-center gap-6 text-sm text-gray-400 font-semibold mb-6">
-            <a class="hover:text-brand-orange transition-colors" href="#">Instagram</a>
-            <a class="hover:text-brand-orange transition-colors" href="#">YouTube</a>
-            <a class="hover:text-brand-orange transition-colors" href="#">LinkedIn</a>
+<!-- ================= FOOTER ================= -->
+<footer class="bg-brand-navyDark text-white -mt-px">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-10">
+
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex flex-col items-center md:items-start gap-3 text-center md:text-left">
+                <span class="inline-block bg-white rounded-xl px-3 py-1.5">
+                    <img alt="Rakit AI Logo" class="h-9 w-auto object-contain" src="/logo.png"/>
+                </span>
+                <p class="text-sm text-white/60 font-medium max-w-xs">Coding Today, Leading Tomorrow.</p>
+            </div>
+
+            <nav class="flex flex-wrap justify-center gap-x-7 gap-y-3 text-sm font-bold">
+                <a href="#programs" class="text-white/80 hover:text-brand-yellow transition-colors">Program</a>
+                <a href="#pricing" class="text-white/80 hover:text-brand-yellow transition-colors">Paket & Biaya</a>
+                <a href="#ekskul" class="text-white/80 hover:text-brand-yellow transition-colors">Ekstrakurikuler</a>
+                <a href="#testimonials" class="text-white/80 hover:text-brand-yellow transition-colors">Testimoni</a>
+                <a href="#faq" class="text-white/80 hover:text-brand-yellow transition-colors">FAQ</a>
+            </nav>
+
+            <div class="flex gap-3">
+                <a href="#" class="px-4 py-2 rounded-full bg-white/10 hover:bg-brand-orange text-xs font-bold transition-colors">Instagram</a>
+                <a href="#" class="px-4 py-2 rounded-full bg-white/10 hover:bg-brand-orange text-xs font-bold transition-colors">YouTube</a>
+                <a href="#" class="px-4 py-2 rounded-full bg-white/10 hover:bg-brand-orange text-xs font-bold transition-colors">LinkedIn</a>
+            </div>
         </div>
-        <p class="text-xs text-gray-400">© 2024 PT Rakit AI Indonesia. All Rights Reserved.</p>
-    </footer>
+
+        <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/50 font-medium">
+            <p>Copyright © 2025 PT Pintar Kapan Aja (PIKA)</p>
+            <div class="flex gap-5">
+                <a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a>
+                <a href="#" class="hover:text-white transition-colors">Syarat & Ketentuan</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <!-- ================= FLOATING WHATSAPP ================= -->
     <div class="fixed bottom-6 right-6 z-50">
