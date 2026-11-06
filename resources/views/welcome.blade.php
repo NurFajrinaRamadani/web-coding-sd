@@ -162,8 +162,32 @@
             <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-bold text-gray-600">
                 <a href="#programs" class="hover:text-brand-orange transition-colors">Program</a>
                 <a href="#pricing" class="hover:text-brand-orange transition-colors">Paket & Biaya</a>
-                <a href="#ekskul" class="hover:text-brand-orange transition-colors">Ekstrakurikuler</a>
-                <a href="#testimonials" class="hover:text-brand-orange transition-colors">Testimoni</a>
+                <div class="relative group">
+                    <a href="#ekskul"
+                        class="inline-flex items-center gap-1 py-2 hover:text-brand-orange transition-colors">
+                        Ekstrakurikuler
+                        <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                            fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+
+                    <!-- Dropdown -->
+                    <div
+                        class="absolute left-0 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-200 z-50">
+                        <div
+                            class="w-64 bg-white rounded-2xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.12)] p-2">
+                            <a href="#ekskul"
+                                class="flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold text-brand-navy hover:bg-orange-50 hover:text-brand-orange transition-colors">
+                                Daftar Ekstrakurikuler
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div> <a href="#testimonials" class="hover:text-brand-orange transition-colors">Testimoni</a>
                 <a href="#faq" class="hover:text-brand-orange transition-colors">FAQ</a>
             </nav>
 
@@ -2043,166 +2067,144 @@
 
     <!-- ================= FLOATING WHATSAPP ================= -->
     <div class="fixed bottom-6 right-6 z-50">
-        <a aria-label="Chat WhatsApp"
-            class="flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full shadow-lg shadow-green-500/40 transition-transform active:scale-90"
-            href="https://wa.me/" target="_blank">
-            <svg class="w-7 h-7 fill-current" viewbox="0 0 24 24">
+        <!-- ================= FLOATING WHATSAPP ================= -->
+        <a href="https://wa.me/62XXXXXXXXXX?text=Halo%20Rakit%20AI,%20saya%20ingin%20minta%20demo%20belajar"
+            target="_blank" aria-label="Minta Demo Belajar via WhatsApp"
+            class="fixed bottom-6 right-4 sm:right-6 z-50 inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold text-sm sm:text-base pl-4 pr-5 py-3.5 rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.25)] transition-all active:scale-95">
+            <svg class="w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24">
                 <path
-                    d="M12.031 2C6.495 2 2 6.495 2 12.031a9.98 9.98 0 0 0 1.554 5.342L2 22l4.78-1.517a9.99 9.99 0 0 0 5.251 1.488c5.536 0 10.031-4.495 10.031-10.031S17.567 2 12.031 2zm0 18.232a8.21 8.21 0 0 1-4.223-1.163l-.303-.18-3.136.996.999-3.058-.198-.315a8.2 8.2 0 1 1 6.861 3.72zm4.55-6.177c-.25-.125-1.477-.729-1.706-.813-.229-.083-.396-.125-.563.125-.167.25-.646.813-.792.98-.146.166-.292.187-.542.062s-1.054-.388-2.008-1.238c-.742-.662-1.243-1.48-1.389-1.73-.146-.25-.016-.385.109-.51.112-.112.25-.292.375-.438s.167-.25.25-.417a.52.52 0 0 0-.021-.5c-.062-.125-.562-1.354-.77-1.854-.203-.487-.41-.421-.563-.429l-.479-.008c-.167 0-.438.062-.667.312s-.875.854-.875 2.083c0 1.229.896 2.417 1.021 2.583.125.167 1.763 2.693 4.271 3.777.597.258 1.064.412 1.428.528.6.191 1.146.164 1.578.099.481-.072 1.477-.604 1.685-1.188.208-.583.208-1.083.146-1.188-.063-.104-.229-.167-.479-.292z">
-                </path>
+                    d="M12.031 2C6.495 2 2 6.495 2 12.031a9.98 9.98 0 0 0 1.554 5.342L2 22l4.78-1.517a9.99 9.99 0 0 0 5.251 1.488c5.536 0 10.031-4.495 10.031-10.031S17.567 2 12.031 2zm0 18.232a8.21 8.21 0 0 1-4.223-1.163l-.303-.18-3.136.996.999-3.058-.198-.315a8.2 8.2 0 1 1 6.861 3.72zm4.55-6.177c-.25-.125-1.477-.729-1.706-.813-.229-.083-.396-.125-.563.125-.167.25-.646.813-.792.98-.146.166-.292.187-.542.062s-1.054-.388-2.008-1.238c-.742-.662-1.243-1.48-1.389-1.73-.146-.25-.016-.385.109-.51.112-.112.25-.292.375-.438s.167-.25.25-.417a.52.52 0 0 0-.021-.5c-.062-.125-.562-1.354-.77-1.854-.203-.487-.41-.421-.563-.429l-.479-.008c-.167 0-.438.062-.667.312s-.875.854-.875 2.083c0 1.229.896 2.417 1.021 2.583.125.167 1.763 2.693 4.271 3.777.597.258 1.064.412 1.428.528.6.191 1.146.164 1.578.099.481-.072 1.477-.604 1.685-1.188.208-.583.208-1.083.146-1.188-.063-.104-.229-.167-.479-.292z" />
             </svg>
-            <span class="absolute top-0 right-0 w-3.5 h-3.5 bg-red-500 border-2 border-white rounded-full"></span>
+            Minta Demo Belajar
         </a>
     </div>
 
-    <!-- ================= JAVASCRIPT INTERACTIONS ================= -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 
-            // Skill tabs (section 4)
+            // ==========================================
+            // 1. LOGIKA SKILL TABS (Halaman Skill Masa Depan)
+            // ==========================================
             const skillTabs = document.querySelectorAll('.skill-tab');
             const skillPanels = document.querySelectorAll('.skill-panel');
-            skillTabs.forEach((tab, i) => {
-                tab.addEventListener('click', () => {
-                    skillTabs.forEach((t, j) => {
-                        t.classList.toggle('is-active', i === j);
-                        skillPanels[j].classList.toggle('hidden', i !== j);
-                    });
-                });
-            });
 
-            // FAQ Accordion Interaction
-            const faqButtons = document.querySelectorAll('.faq-btn');
-            faqButtons.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const content = this.nextElementSibling;
-                    const svgIcon = this.querySelector('.faq-icon svg');
-                    const isOpen = !content.classList.contains('hidden');
+            skillTabs.forEach((tab, index) => {
+                tab.addEventListener('click', function() {
+                    // Hapus class 'is-active' dari semua tab
+                    skillTabs.forEach(t => t.classList.remove('is-active'));
+                    // Tambahkan class 'is-active' ke tab yang diklik
+                    this.classList.add('is-active');
 
-                    // Tutup item FAQ lainnya (opsional untuk pengalaman accordion yang bersih)
-                    document.querySelectorAll('.faq-content').forEach(c => c.classList.add(
-                        'hidden'));
-                    document.querySelectorAll('.faq-icon svg').forEach(svg => {
-                        svg.style.transform = 'rotate(0deg)';
+                    // Sembunyikan semua panel
+                    skillPanels.forEach(panel => {
+                        panel.classList.add('hidden');
+                        panel.style.display = 'none'; // Paksa sembunyikan
                     });
 
-                    // Toggle item yang sedang diklik
-                    if (!isOpen) {
-                        content.classList.remove('hidden');
-                        if (svgIcon) svgIcon.style.transform = 'rotate(180deg)';
+                    // Tampilkan panel yang sesuai dengan urutan tab
+                    if (skillPanels[index]) {
+                        skillPanels[index].classList.remove('hidden');
+                        skillPanels[index].style.display = 'block'; // Paksa tampilkan
                     }
                 });
             });
 
-            // Pricing Billing Switcher Interaction
+
+            // ==========================================
+            // 2. LOGIKA FAQ ACCORDION (Halaman FAQ)
+            // ==========================================
+            const faqBtns = document.querySelectorAll('.faq-btn');
+
+            faqBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.faq-icon svg');
+                    const isOpen = content.style.display === 'block';
+
+                    // Tutup semua FAQ terlebih dahulu (opsional, biar rapi)
+                    document.querySelectorAll('.faq-content').forEach(c => {
+                        c.style.display = 'none';
+                        c.classList.add('hidden');
+                    });
+                    document.querySelectorAll('.faq-icon svg').forEach(i => {
+                        i.style.transform = 'rotate(0deg)';
+                    });
+
+                    // Jika yang diklik tadi belum terbuka, buka sekarang
+                    if (!isOpen) {
+                        content.style.display = 'block';
+                        content.classList.remove('hidden');
+                        if (icon) icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+
+            // ==========================================
+            // 3. LOGIKA CAROUSEL (Portofolio & Testimoni)
+            // ==========================================
+            document.addEventListener('click', function(e) {
+                const nav = e.target.closest(
+                    '[data-portfolio-prev],[data-portfolio-next],[data-testi-prev],[data-testi-next]');
+                if (nav) {
+                    const isPortfolio = nav.hasAttribute('data-portfolio-prev') || nav.hasAttribute(
+                        'data-portfolio-next');
+                    const track = document.getElementById(isPortfolio ? 'portfolio-track' : 'testi-track');
+                    if (!track) return;
+
+                    const card = track.querySelector(isPortfolio ? 'article' : '.testi-card');
+                    const step = card ? card.offsetWidth + 24 : 300;
+                    const dir = (nav.hasAttribute('data-portfolio-next') || nav.hasAttribute(
+                        'data-testi-next')) ? 1 : -1;
+
+                    track.scrollBy({
+                        left: dir * step,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+
+
+            // ==========================================
+            // 4. LOGIKA PRICING SWITCHER (Bulanan vs Term)
+            // ==========================================
             const btnMonthly = document.getElementById('billing-monthly-btn');
             const btnTerm = document.getElementById('billing-term-btn');
-            const elJuniorPrice = document.querySelector('.pricing-junior');
-            const elAiPrice = document.querySelector('.pricing-ai');
-            const elTeenPrice = document.querySelector('.pricing-teen');
-            const elPeriods = document.querySelectorAll('.pricing-period');
-            const elJuniorNote = document.querySelector('.pricing-junior-note');
-            const elAiNote = document.querySelector('.pricing-ai-note');
-            const elTeenNote = document.querySelector('.pricing-teen-note');
+            const q = (selector) => document.querySelector(selector);
+            const periods = document.querySelectorAll('.pricing-period');
+
+            function setActiveBtn(activeBtn, inactiveBtn) {
+                activeBtn.classList.add('bg-white', 'text-brand-navy', 'shadow-sm');
+                activeBtn.classList.remove('text-gray-500');
+                inactiveBtn.classList.remove('bg-white', 'text-brand-navy', 'shadow-sm');
+                inactiveBtn.classList.add('text-gray-500');
+            }
 
             if (btnMonthly && btnTerm) {
                 btnMonthly.addEventListener('click', function() {
-                    // Update tampilan tombol
-                    btnMonthly.classList.add('bg-white', 'text-brand-navy', 'shadow-sm');
-                    btnMonthly.classList.remove('text-gray-500');
-                    btnTerm.classList.remove('bg-white', 'text-brand-navy', 'shadow-sm');
-                    btnTerm.classList.add('text-gray-500');
-
-                    // Update harga bulanan
-                    if (elJuniorPrice) elJuniorPrice.textContent = '349.000';
-                    if (elAiPrice) elAiPrice.textContent = '499.000';
-                    if (elTeenPrice) elTeenPrice.textContent = '699.000';
-
-                    elPeriods.forEach(p => p.textContent = '/bulan');
-
-                    if (elJuniorNote) elJuniorNote.textContent = 'Biaya investasi reguler bulanan (4 sesi)';
-                    if (elAiNote) elAiNote.textContent = 'Pilihan favorit 65% orang tua siswa Rakit AI';
-                    if (elTeenNote) elTeenNote.textContent =
+                    setActiveBtn(btnMonthly, btnTerm);
+                    q('.pricing-junior').textContent = '349.000';
+                    q('.pricing-ai').textContent = '499.000';
+                    q('.pricing-teen').textContent = '699.000';
+                    periods.forEach(p => p.textContent = '/bulan');
+                    q('.pricing-junior-note').textContent = 'Biaya investasi reguler bulanan (4 sesi)';
+                    q('.pricing-ai-note').textContent = 'Pilihan favorit 65% orang tua siswa Rakit AI';
+                    q('.pricing-teen-note').textContent =
                         'Persiapan portofolio & karir masa depan (4 sesi)';
                 });
 
                 btnTerm.addEventListener('click', function() {
-                    // Update tampilan tombol
-                    btnTerm.classList.add('bg-white', 'text-brand-navy', 'shadow-sm');
-                    btnTerm.classList.remove('text-gray-500');
-                    btnMonthly.classList.remove('bg-white', 'text-brand-navy', 'shadow-sm');
-                    btnMonthly.classList.add('text-gray-500');
-
-                    // Update harga term (3 bulan - diskon 15%)
-                    if (elJuniorPrice) elJuniorPrice.textContent = '890.000';
-                    if (elAiPrice) elAiPrice.textContent = '1.270.000';
-                    if (elTeenPrice) elTeenPrice.textContent = '1.780.000';
-
-                    elPeriods.forEach(p => p.textContent = '/term (3 bln)');
-
-                    if (elJuniorNote) elJuniorNote.textContent = '🎉 Hemat Rp 157.000 (12 sesi penuh)';
-                    if (elAiNote) elAiNote.textContent = '🎉 Hemat Rp 227.000 + Bonus Merchandise';
-                    if (elTeenNote) elTeenNote.textContent =
-                        '🎉 Hemat Rp 317.000 + Sesi Konsultasi Eksklusif';
-                });
-            }
-        });
-    </script>
-
-    <script>
-        (function() {
-            function initSkillTabs() {
-                var tabs = document.querySelectorAll('.skill-tab');
-                var panels = document.querySelectorAll('.skill-panel');
-                if (!tabs.length || tabs.length !== panels.length) return;
-
-                tabs.forEach(function(tab, i) {
-                    tab.addEventListener('click', function() {
-                        tabs.forEach(function(t, j) {
-                            t.classList.toggle('is-active', i === j);
-                            panels[j].classList.toggle('hidden', i !== j);
-                        });
-                    });
+                    setActiveBtn(btnTerm, btnMonthly);
+                    q('.pricing-junior').textContent = '890.000';
+                    q('.pricing-ai').textContent = '1.270.000';
+                    q('.pricing-teen').textContent = '1.780.000';
+                    periods.forEach(p => p.textContent = '/term (3 bln)');
+                    q('.pricing-junior-note').textContent = '🎉 Hemat Rp 157.000 (12 sesi penuh)';
+                    q('.pricing-ai-note').textContent = '🎉 Hemat Rp 227.000 + Bonus Merchandise';
+                    q('.pricing-teen-note').textContent = '🎉 Hemat Rp 317.000 + Sesi Konsultasi Eksklusif';
                 });
             }
 
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initSkillTabs);
-            } else {
-                initSkillTabs();
-            }
-        })();
-    </script>
-
-    <script>
-        document.addEventListener('click', function(e) {
-            var btn = e.target.closest ? e.target.closest('[data-portfolio-prev],[data-portfolio-next]') : null;
-            if (!btn) return;
-            var track = document.getElementById('portfolio-track');
-            if (!track) return;
-            var card = track.querySelector('article');
-            var step = card ? card.offsetWidth + 24 : 300;
-            var dir = btn.hasAttribute('data-portfolio-next') ? 1 : -1;
-            track.scrollBy({
-                left: dir * step,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener('click', function(e) {
-            var btn = e.target.closest ? e.target.closest('[data-testi-prev],[data-testi-next]') : null;
-            if (!btn) return;
-            var track = document.getElementById('testi-track');
-            if (!track) return;
-            var card = track.querySelector('.testi-card');
-            var step = card ? card.offsetWidth + 24 : 300;
-            var dir = btn.hasAttribute('data-testi-next') ? 1 : -1;
-            track.scrollBy({
-                left: dir * step,
-                behavior: 'smooth'
-            });
         });
     </script>
 
