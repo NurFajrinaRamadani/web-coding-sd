@@ -162,8 +162,8 @@
             <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-bold text-gray-600">
                 <a href="#programs" class="hover:text-brand-orange transition-colors">Program</a>
                 <a href="#pricing" class="hover:text-brand-orange transition-colors">Paket & Biaya</a>
-
-                <!-- Dropdown Menu Ekstrakurikuler -->
+                
+                <!-- Menu Ekstrakurikuler dengan Dropdown -->
                 <div class="relative group">
                     <a href="#ekskul"
                         class="inline-flex items-center gap-1.5 py-2 hover:text-brand-orange transition-colors cursor-pointer">
@@ -174,25 +174,27 @@
                         </svg>
                     </a>
 
-                    <!-- Dropdown Item -->
+                    <!-- Dropdown Content -->
                     <div
-                        class="absolute left-0 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-200 z-50">
+                        class="absolute left-0 top-full pt-2 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-200 z-50">
                         <div
-                            class="w-64 bg-white rounded-2xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.12)] p-2">
-                            <a href="#ekskul"
-                                class="block px-4 py-3 rounded-xl text-sm font-bold text-brand-navy hover:bg-orange-50 hover:text-brand-orange transition-colors">
-                                Junior Tech Explorer
-                                <span class="block text-[11px] font-medium text-gray-400">Kelas 1 - 3 SD</span>
+                            class="w-64 bg-white rounded-2xl border border-gray-100 shadow-[0_12px_32px_rgba(0,0,0,0.12)] p-2">
+                            <!-- Daftar Ekstrakurikuler (Ke Halaman Pendaftaran) -->
+                            <a href="{{ route('ekskul.daftar') }}"
+                                class="flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold text-brand-navy hover:bg-orange-50 hover:text-brand-orange transition-colors group/item">
+                                <div class="flex flex-col">
+                                    <span class="text-brand-navy group-hover/item:text-brand-orange">Daftar Ekstrakurikuler</span>
+                                    <span class="text-[11px] font-normal text-gray-400">Pendaftaran sekolah & siswa</span>
+                                </div>
+                                <svg class="w-4 h-4 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
                             </a>
                             <a href="#ekskul"
-                                class="block px-4 py-3 rounded-xl text-sm font-bold text-brand-navy hover:bg-orange-50 hover:text-brand-orange transition-colors">
-                                AI & Game Creator
-                                <span class="block text-[11px] font-medium text-gray-400">Kelas 4 - 6 SD</span>
-                            </a>
-                            <a href="#ekskul"
-                                class="block px-4 py-3 rounded-xl text-sm font-bold text-brand-navy hover:bg-orange-50 hover:text-brand-orange transition-colors">
-                                Young Tech Leaders
-                                <span class="block text-[11px] font-medium text-gray-400">SMP</span>
+                                class="flex items-center justify-between px-4 py-2.5 rounded-xl text-xs font-bold text-gray-500 hover:bg-gray-50 hover:text-brand-navy transition-colors">
+                                <span>Informasi Program Ekskul</span>
+                                <span class="text-gray-400">↓</span>
                             </a>
                         </div>
                     </div>
@@ -243,13 +245,15 @@
                         </svg>
                     </button>
                     <div id="mobile-ekskul-submenu" class="pl-3 pr-1 py-1 space-y-1 bg-orange-50/60 rounded-xl mt-1">
-                        <a href="#ekskul"
-                            class="mobile-nav-link flex items-center justify-between py-2 px-3 text-xs sm:text-sm font-bold text-brand-navy hover:text-brand-orange transition-colors">
+                        <a href="{{ route('ekskul.daftar') }}"
+                            class="mobile-nav-link flex items-center justify-between py-2 px-3 text-xs sm:text-sm font-bold text-brand-orange hover:bg-orange-100 rounded-lg transition-colors">
                             <span>Daftar Ekstrakurikuler</span>
-                            <svg class="w-3.5 h-3.5 text-brand-orange" fill="none" stroke="currentColor"
-                                stroke-width="2.5" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
+                            <span class="text-[10px] font-black uppercase bg-brand-orange text-white px-2 py-0.5 rounded-full">Daftar</span>
+                        </a>
+                        <a href="#ekskul"
+                            class="mobile-nav-link flex items-center justify-between py-2 px-3 text-xs sm:text-sm font-bold text-gray-600 hover:text-brand-navy transition-colors">
+                            <span>Informasi Program Ekskul</span>
+                            <span class="text-gray-400">↓</span>
                         </a>
                     </div>
                 </div>
@@ -1564,15 +1568,22 @@
                     </div>
                 </div>
 
-                <a href="https://wa.me/?text=Halo%20Tim%20Kemitraan%20Rakit%20AI,%20kami%20tertarik%20membuka%20ekskul%20coding%20%26%20AI%20di%20sekolah%20kami.%20Boleh%20minta%20informasi%20proposalnya?"
-                    target="_blank"
-                    class="flex-shrink-0 inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-extrabold px-6 sm:px-7 py-3.5 rounded-full shadow-lg shadow-green-500/25 active:scale-95 transition-all whitespace-nowrap">
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.842-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-                    </svg>
-                    <span>Hubungi Tim Kemitraan via WhatsApp</span>
-                </a>
+                <div class="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+                    <a href="{{ route('ekskul.daftar') }}"
+                        class="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-white text-xs sm:text-sm font-extrabold px-6 py-3.5 rounded-full shadow-lg shadow-orange-500/25 active:scale-95 transition-all whitespace-nowrap">
+                        <span>Form Pendaftaran Ekskul</span>
+                        <span>→</span>
+                    </a>
+                    <a href="https://wa.me/?text=Halo%20Tim%20Kemitraan%20Rakit%20AI,%20kami%20tertarik%20membuka%20ekskul%20coding%20%26%20AI%20di%20sekolah%20kami.%20Boleh%20minta%20informasi%20proposalnya?"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-extrabold px-5 py-3.5 rounded-full shadow-lg shadow-green-500/25 active:scale-95 transition-all whitespace-nowrap">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 2C6.495 2 2 6.495 2 12.031a9.98 9.98 0 0 0 1.554 5.342L2 22l4.78-1.517a9.99 9.99 0 0 0 5.251 1.488c5.536 0 10.031-4.495 10.031-10.031S17.567 2 12.031 2zm0 18.232a8.21 8.21 0 0 1-4.223-1.163l-.303-.18-3.136.996.999-3.058-.198-.315a8.2 8.2 0 1 1 6.861 3.72zm4.55-6.177c-.25-.125-1.477-.729-1.706-.813-.229-.083-.396-.125-.563.125-.167.25-.646.813-.792.98-.146.166-.292.187-.542.062s-1.054-.388-2.008-1.238c-.742-.662-1.243-1.48-1.389-1.73-.146-.25-.016-.385.109-.51.112-.112.25-.292.375-.438s.167-.25.25-.417a.52.52 0 0 0-.021-.5c-.062-.125-.562-1.354-.77-1.854-.203-.487-.41-.421-.563-.429l-.479-.008c-.167 0-.438.062-.667.312s-.875.854-.875 2.083c0 1.229.896 2.417 1.021 2.583.125.167 1.763 2.693 4.271 3.777.597.258 1.064.412 1.428.528.6.191 1.146.164 1.578.099.481-.072 1.477-.604 1.685-1.188.208-.583.208-1.083.146-1.188-.063-.104-.229-.167-.479-.292z" />
+                        </svg>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
             </div>
 
         </div>
@@ -2094,8 +2105,8 @@
                     <a href="#programs" class="text-white/80 hover:text-brand-yellow transition-colors">Program</a>
                     <a href="#pricing" class="text-white/80 hover:text-brand-yellow transition-colors">Paket &
                         Biaya</a>
-                    <a href="#ekskul"
-                        class="text-white/80 hover:text-brand-yellow transition-colors">Ekstrakurikuler</a>
+                    <a href="{{ route('ekskul.daftar') }}"
+                        class="text-white/80 hover:text-brand-yellow transition-colors">Daftar Ekstrakurikuler</a>
                     <a href="#testimonials"
                         class="text-white/80 hover:text-brand-yellow transition-colors">Testimoni</a>
                     <a href="#faq" class="text-white/80 hover:text-brand-yellow transition-colors">FAQ</a>
